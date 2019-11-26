@@ -1,3 +1,22 @@
+$('#services ul').owlCarousel({
+	loop: true,
+	reponsiveClass: true,
+	responsive:{
+		0:{
+			items: 1,
+			nav: true
+		},
+		600:{
+			items: 2,
+			nav: true
+		},
+		1000:{
+			items: 3,
+			nav: true
+		}
+	}
+});
+
 window.addEventListener('scroll', function(e) {
     let y = window.pageYOffset
     

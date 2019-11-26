@@ -17,14 +17,24 @@
                 </div>
 
                 <div id="header-menu" class="d-none d-md-flex col-md-9 col-lg-7 offset-lg-2 col-xl-7 offset-xl-3 justify-content-md-end">
-                    <?php
+
+                    <ul>
+                        <li id="menu-home">Home</li>
+                        <li id="menu-about">About</li>
+                        <li id="menu-services">Services</li>
+                        <li id="menu-work">Work</li>
+                        <li id="menu-clients">Clients</li>
+                        <li id="menu-contact">Contacts</li>
+                    </ul>
+
+                    <!-- <?php
 
                     wp_nav_menu( array(
                         'menu' => 'menu',
                         'theme_location' => 'menu'
                     ));
 
-                    ?>
+                    ?> -->
                 </div>
             </div>
         </div>
