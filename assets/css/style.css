@@ -13742,11 +13742,44 @@ section#work {
   padding: 100px 0; }
   section#work h4 {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 300;
     letter-spacing: 1px;
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  section#work h5 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: lowercase;
+    margin-bottom: 15px; }
+  section#work ul#work-menu {
+    margin: 0 0 30px 0;
+    padding: 0; }
+    section#work ul#work-menu li {
+      font-family: 'Roboto';
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      list-style: none;
+      float: left;
+      margin: 0 10px;
+      padding: 5px;
+      cursor: pointer; }
+  section#work ul#work-post {
+    margin: 0;
+    padding: 0; }
+    section#work ul#work-post li {
+      float: left;
+      width: 25%;
+      list-style: none; }
+      section#work ul#work-post li img {
+        width: 100%;
+        height: auto; }
 
 section#clients {
   width: 100%;

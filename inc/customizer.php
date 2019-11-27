@@ -48,9 +48,6 @@ function mytheme_customize_register( $wp_customize ) {
         ),
     ));
 
-
-
-
     // FOOTER
     $wp_customize->add_section(
         'section_footer', array(
@@ -122,6 +119,37 @@ function mytheme_customize_register( $wp_customize ) {
         'input_attrs' => array(
             'placeholder' => __('exemplo@email.com'),
         ),
+    ));
+
+
+    // WORK
+
+    $wp_customize->add_section(
+        'section_work', array(
+        'title' => __( 'Work', 'odin' ),
+        'priority' => 204,
+    ));
+
+    $wp_customize->add_setting( 'first_work_section' );
+
+    $wp_customize->add_control('first_work_section', array(
+        'type' => 'text',
+        'section' => 'section_work',
+        'label' => __('Insira o 1º tipo de trabalho', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('Fotografia'),
+        )
+    ));
+
+    $wp_customize->add_setting( 'second_work_section' );
+
+    $wp_customize->add_control('second_work_section', array(
+        'type' => 'text',
+        'section' => 'section_work',
+        'label' => __('Insira o 2º tipo de trabalho', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('Design'),
+        )
     ));
 }
 
