@@ -19,12 +19,12 @@
                 <div id="header-menu" class="d-none d-md-flex col-md-9 col-lg-7 offset-lg-2 col-xl-7 offset-xl-3 justify-content-md-end">
 
                     <ul>
-                        <li id="menu-home">Home</li>
-                        <li id="menu-about">About</li>
-                        <li id="menu-services">Services</li>
-                        <li id="menu-work">Work</li>
-                        <li id="menu-clients">Clients</li>
-                        <li id="menu-contact">Contacts</li>
+                        <li id="menu-home"><span>Home</span></li>
+                        <li id="menu-about"><span>About</span></li>
+                        <li id="menu-services"><span>Services</span></li>
+                        <li id="menu-work"><span>Work</span></li>
+                        <li id="menu-clients"><span>Clients</span></li>
+                        <li id="menu-contact"><span>Contacts</span></li>
                     </ul>
 
                     <!-- <?php

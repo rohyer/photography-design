@@ -13,7 +13,7 @@ $args = array(
             </div>
 
             <ul id="work-menu" class="col-12 d-flex justify-content-center">
-                <li>All</li>
+                <li class="work-menu-selected">All</li>
                 <li><?php echo get_theme_mod( 'first_work_section' ); ?></li>
                 <li><?php echo get_theme_mod( 'second_work_section' ); ?></li>
             </ul>

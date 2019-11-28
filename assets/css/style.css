@@ -13619,6 +13619,11 @@ readers do not read off random characters that represent icons */
   margin-top: 0px;
   transition-duration: .6s; }
 
+.work-menu-selected {
+  background-color: #FD7070;
+  color: #FFFFFF;
+  border-radius: 5px; }
+
 header {
   position: absolute;
   width: 100%;
@@ -13645,6 +13650,31 @@ header {
       margin: 0 5px;
       line-height: 90px;
       color: #FFFFFF; }
+      header #header-menu ul li span {
+        position: relative; }
+        header #header-menu ul li span:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          background-color: #FD7070;
+          visibility: hidden;
+          transition-duration: .3s;
+          transform: scaleX(0); }
+        header #header-menu ul li span:hover:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #FD7070;
+          visibility: visible;
+          transform: scaleX(1); }
       header #header-menu ul li:last-child {
         padding: 0 0 0 5px;
         margin: 0 0 0 5px; }
@@ -13760,7 +13790,7 @@ section#work {
     text-transform: lowercase;
     margin-bottom: 15px; }
   section#work ul#work-menu {
-    margin: 0 0 30px 0;
+    margin: 0 0 45px 0;
     padding: 0; }
     section#work ul#work-menu li {
       font-family: 'Roboto';
@@ -13771,15 +13801,35 @@ section#work {
       list-style: none;
       float: left;
       margin: 0 10px;
-      padding: 5px;
+      padding: 2px 6px;
       cursor: pointer; }
   section#work ul#work-post {
     margin: 0;
     padding: 0; }
     section#work ul#work-post li {
+      position: relative;
       float: left;
       width: 25%;
       list-style: none; }
+      section#work ul#work-post li:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0%;
+        height: 0%;
+        background-color: rgba(255, 255, 255, 0.7);
+        transition-duration: .4s; }
+      section#work ul#work-post li:hover:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7%;
+        left: 7%;
+        width: 86%;
+        height: 86%;
+        background-color: rgba(255, 255, 255, 0.7); }
       section#work ul#work-post li img {
         width: 100%;
         height: auto; }
