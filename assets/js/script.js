@@ -29,19 +29,32 @@ window.addEventListener('scroll', function(e) {
     }
 })
 
+var menuHome = window.document.getElementById('menu-home')
 var menuAbout = window.document.getElementById('menu-about')
 var menuServices = window.document.getElementById('menu-services')
 var menuWork = window.document.getElementById('menu-work')
 var menuClients = window.document.getElementById('menu-clients')
-var menuContacts = window.document.getElementById('menu-contacts')
+var menuContact = window.document.getElementById('menu-contact')
+
+function scrollToPosition(toPosition) {
+	window.scroll({
+		top: toPosition,
+		behavior: "smooth"
+	})
+}
+
+menuHome.addEventListener('click', function(e) {
+	var heightHome = 0
+	scrollToPosition(heightHome)
+})
 
 menuAbout.addEventListener('click', function(e) {
 	var about = window.document.getElementById('about')
 	var header = window.document.querySelector('header')
 	var heightHeader = header.offsetHeight
 	var heightAbout = about.offsetTop
-	alert(heightAbout)
-    window.scrollTo(0, heightAbout - heightHeader)
+	var toPosition = heightAbout - heightHeader
+    scrollToPosition(toPosition)
 })
 
 menuServices.addEventListener('click', function(e) {
@@ -49,6 +62,33 @@ menuServices.addEventListener('click', function(e) {
 	var header = window.document.querySelector('header')
 	var heightHeader = header.offsetHeight
 	var heightServices = services.offsetTop
-	alert(heightServices)
-	window.scrollTo(0, heightServices - heightHeader)
+	var toPosition = heightServices - heightHeader
+    scrollToPosition(toPosition)
+})
+
+menuWork.addEventListener('click', function(e) {
+	var work = window.document.getElementById('work')
+	var header = window.document.querySelector('header')
+	var heightHeader = header.offsetHeight
+	var heightWork = work.offsetTop
+	var toPosition = heightWork - heightHeader
+    scrollToPosition(toPosition)
+})
+
+menuClients.addEventListener('click', function(e) {
+	var clients = window.document.getElementById('clients')
+	var header = window.document.querySelector('header')
+	var heightHeader = header.offsetHeight
+	var heightClients = clients.offsetTop
+	var toPosition = heightClients - heightHeader
+    scrollToPosition(toPosition)
+})
+
+menuContact.addEventListener('click', function(e) {
+	var contact = window.document.getElementById('contact')
+	var header = window.document.querySelector('header')
+	var heightHeader = header.offsetHeight
+	var heightContact = contact.offsetTop
+	var toPosition = heightContact - heightHeader
+    scrollToPosition(toPosition)
 })
