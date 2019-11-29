@@ -35,13 +35,17 @@ window.addEventListener('scroll', function(e) {
 window.addEventListener('scroll', function(e) {
 	const y = window.pageYOffset
 
+	const header = window.document.querySelector('header')
 	const menuHeader = window.document.getElementById('menu-home')
 	const show = window.document.getElementById('show')
-	const positionMenuHeader = show.offsetTop
+	const headerHeight = header.offsetHeight
+	const positionMenuHeader = show.offsetHeight
 	console.log(positionMenuHeader)
 
-	if ((y >= 0) && (y <= positionMenuHeader)) {
+	if ((y >= 0) && (y <= positionMenuHeader - headerHeight)) {
 		menuHeader.classList.add('header-menu-selected')
+	} else {
+		menuHeader.classList.remove('header-menu-selected')
 	}
 
 	// const menuAbout = window.document.getElementById('about')
