@@ -17,6 +17,9 @@ $('#services ul').owlCarousel({
 	}
 });
 
+// ================================================
+// ==================== HEADER ====================
+
 window.addEventListener('scroll', function(e) {
     let y = window.pageYOffset
     
@@ -29,66 +32,80 @@ window.addEventListener('scroll', function(e) {
     }
 })
 
-var menuHome = window.document.getElementById('menu-home')
-var menuAbout = window.document.getElementById('menu-about')
-var menuServices = window.document.getElementById('menu-services')
-var menuWork = window.document.getElementById('menu-work')
-var menuClients = window.document.getElementById('menu-clients')
-var menuContact = window.document.getElementById('menu-contact')
+window.addEventListener('scroll', function(e) {
+	const y = window.pageYOffset
 
-function scrollToPosition(toPosition) {
-	window.scroll({
-		top: toPosition,
-		behavior: "smooth"
-	})
+	const menuHeader = window.document.getElementById('menu-home')
+	const show = window.document.getElementById('show')
+	const positionMenuHeader = show.offsetTop
+	console.log(positionMenuHeader)
+
+	if ((y >= 0) && (y <= positionMenuHeader)) {
+		menuHeader.classList.add('header-menu-selected')
+	}
+
+	// const menuAbout = window.document.getElementById('about')
+	// const menuServices = window.document.getElementById('services')
+	// const menuWork = window.document.getElementById('work')
+	// const menuClients = window.document.getElementById('clients')
+	// const menuContact = window.document.getElementById('contact')
+
+
+})
+
+// ================================================
+// ==================== HEADER ====================
+
+// ======================================================
+// ==================== CLICK SCROLL ====================
+
+var menuItems = window.document.querySelectorAll('li.header-menu-item a')
+
+menuItems.forEach(item => {
+	item.addEventListener('click', scrollClick)
+})
+
+function scrollClick(event) {
+	event.preventDefault()
+	const element = event.target
+	const id = element.getAttribute('href')
+	const menuItem = window.document.querySelector(id)
+	const header = window.document.querySelector('header')
+	const heightHeader = header.offsetHeight
+	const heightMenuItem = menuItem.offsetTop
+	const toPosition = heightMenuItem - heightHeader
+	scrollToPosition(toPosition)
 }
 
-menuHome.addEventListener('click', function(e) {
-	var heightHome = 0
-	scrollToPosition(heightHome)
-})
+function scrollToPosition(toPosition) {
+	// window.scroll({
+	// 	top: toPosition,
+	// 	behavior: "smooth"
+	// })
+	smoothScrollTo(toPosition, 1000)
+}
 
-menuAbout.addEventListener('click', function(e) {
-	var about = window.document.getElementById('about')
-	var header = window.document.querySelector('header')
-	var heightHeader = header.offsetHeight
-	var heightAbout = about.offsetTop
-	var toPosition = heightAbout - heightHeader
-    scrollToPosition(toPosition)
-})
+function smoothScrollTo(endY, duration) {
+	const startY = window.scrollY || window.pageYOffset
+	const distanceY = endY - startY
+	const startTime = new Date().getTime()
 
-menuServices.addEventListener('click', function(e) {
-	var services = window.document.getElementById('services')
-	var header = window.document.querySelector('header')
-	var heightHeader = header.offsetHeight
-	var heightServices = services.offsetTop
-	var toPosition = heightServices - heightHeader
-    scrollToPosition(toPosition)
-})
+	duration = typeof duration !== 'undefined' ? duration : 400
 
-menuWork.addEventListener('click', function(e) {
-	var work = window.document.getElementById('work')
-	var header = window.document.querySelector('header')
-	var heightHeader = header.offsetHeight
-	var heightWork = work.offsetTop
-	var toPosition = heightWork - heightHeader
-    scrollToPosition(toPosition)
-})
+	const easeInOutQuart = (time, from, distance, duration) => {
+		if ((time /= duration /2 ) < 1) return distance / 2 * time * time * time * time * time + from
+		return -distance /2 * ((time -= 2) * time * time * time - 2) + from
+	}
 
-menuClients.addEventListener('click', function(e) {
-	var clients = window.document.getElementById('clients')
-	var header = window.document.querySelector('header')
-	var heightHeader = header.offsetHeight
-	var heightClients = clients.offsetTop
-	var toPosition = heightClients - heightHeader
-    scrollToPosition(toPosition)
-})
+	const timer = setInterval(() => {
+		const time = new Date().getTime() - startTime
+		const newY = easeInOutQuart(time, startY, distanceY, duration)
+		if (time >= duration) {
+			clearInterval(timer)
+		}
+		window.scroll(0, newY)
+	}, 1000 / 60)
+}
 
-menuContact.addEventListener('click', function(e) {
-	var contact = window.document.getElementById('contact')
-	var header = window.document.querySelector('header')
-	var heightHeader = header.offsetHeight
-	var heightContact = contact.offsetTop
-	var toPosition = heightContact - heightHeader
-    scrollToPosition(toPosition)
-})
+// ======================================================
+// ==================== CLICK SCROLL ====================

@@ -13667,9 +13667,11 @@ header {
       margin: 0 5px;
       line-height: 90px;
       color: #FFFFFF; }
-      header #header-menu ul li span {
-        position: relative; }
-        header #header-menu ul li span:before {
+      header #header-menu ul li a {
+        position: relative;
+        color: #FFFFFF;
+        text-decoration: none; }
+        header #header-menu ul li a:before {
           content: '';
           display: inline-block;
           position: absolute;
@@ -13683,7 +13685,7 @@ header {
           transform: scaleX(0);
           -webkit-transition: all 0.2s ease-in-out 0s;
           transition: all 0.2s ease-in-out 0s; }
-        header #header-menu ul li span:hover:before {
+        header #header-menu ul li a:hover:before {
           visibility: visible;
           -webkit-transform: scaleX(1);
           transform: scaleX(1); }

@@ -34,8 +34,10 @@ header {
                 line-height: 90px;
                 color: #FFFFFF;
 
-                span {
+                a {
                     position: relative;
+                    color: #FFFFFF;
+                    text-decoration: none;
 
                     &:before {
                         content: '';
