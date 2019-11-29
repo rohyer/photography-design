@@ -29,8 +29,26 @@ window.addEventListener('scroll', function(e) {
     }
 })
 
-var menu1 = window.document.getElementById('menu-item-13')
+var menuAbout = window.document.getElementById('menu-about')
+var menuServices = window.document.getElementById('menu-services')
+var menuWork = window.document.getElementById('menu-work')
+var menuClients = window.document.getElementById('menu-clients')
+var menuContacts = window.document.getElementById('menu-contacts')
 
-menu1.addEventListener('click', function(e) {
-    window.scrollTo(0, 500)
+menuAbout.addEventListener('click', function(e) {
+	var about = window.document.getElementById('about')
+	var header = window.document.querySelector('header')
+	var heightHeader = header.offsetHeight
+	var heightAbout = about.offsetTop
+	alert(heightAbout)
+    window.scrollTo(0, heightAbout - heightHeader)
+})
+
+menuServices.addEventListener('click', function(e) {
+	var services = window.document.getElementById('services')
+	var header = window.document.querySelector('header')
+	var heightHeader = header.offsetHeight
+	var heightServices = services.offsetTop
+	alert(heightServices)
+	window.scrollTo(0, heightServices - heightHeader)
 })

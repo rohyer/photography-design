@@ -13624,6 +13624,23 @@ readers do not read off random characters that represent icons */
   color: #FFFFFF;
   border-radius: 5px; }
 
+.header-menu-selected {
+  position: relative; }
+  .header-menu-selected:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -2px;
+    left: 1px;
+    width: 100%;
+    height: 3px;
+    background-color: #FD7070;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s; }
+
 header {
   position: absolute;
   width: 100%;
@@ -13656,24 +13673,19 @@ header {
           content: '';
           display: inline-block;
           position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 0;
+          bottom: -2px;
+          left: 1px;
+          width: 100%;
+          height: 3px;
           background-color: #FD7070;
           visibility: hidden;
-          transition-duration: .3s;
-          transform: scaleX(0); }
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s; }
         header #header-menu ul li span:hover:before {
-          content: '';
-          display: inline-block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background-color: #FD7070;
           visibility: visible;
+          -webkit-transform: scaleX(1);
           transform: scaleX(1); }
       header #header-menu ul li:last-child {
         padding: 0 0 0 5px;
@@ -13685,7 +13697,7 @@ section#show {
   position: relative; }
   section#show #image-show {
     width: 100%;
-    height: 722px;
+    height: 724px;
     background-image: url(../img/main.jpg);
     background-size: cover; }
   section#show:before {
@@ -13772,7 +13784,7 @@ section#work {
   float: left;
   width: 100%;
   height: auto;
-  padding: 100px 0 0 0; }
+  padding: 100px 0; }
   section#work h4 {
     font-family: 'Montserrat';
     font-size: 50px;
@@ -13809,8 +13821,9 @@ section#work {
     section#work ul#work-post li {
       position: relative;
       float: left;
-      width: 25%;
-      list-style: none; }
+      width: 29%;
+      list-style: none;
+      margin: 20px 2%; }
       section#work ul#work-post li:before {
         content: '';
         display: block;

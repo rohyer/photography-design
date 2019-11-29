@@ -17,24 +17,24 @@ $args = array(
                 <li><?php echo get_theme_mod( 'first_work_section' ); ?></li>
                 <li><?php echo get_theme_mod( 'second_work_section' ); ?></li>
             </ul>
+
+            <ul id="work-post">
+            <?php 
+            $query = new WP_Query( $args );
+            if ( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+            ?>
+                <li id="post-<?php the_ID(); ?>" class="work-post">
+                    <div class="work-img">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </li>
+            <?php
+                }
+            }
+            ?>
+            </ul>
         </div>
     </div>
-
-    <ul id="work-post">
-    <?php 
-    $query = new WP_Query( $args );
-    if ( $query->have_posts() ) {
-        while ( $query->have_posts() ) {
-            $query->the_post();
-    ?>
-        <li id="post-<?php the_ID(); ?>" class="work-post">
-            <div class="work-img">
-                <?php the_post_thumbnail(); ?>
-            </div>
-        </li>
-    <?php
-        }
-    }
-    ?>
-    </ul>
 </section>

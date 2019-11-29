@@ -3,7 +3,7 @@ section {
         float: left;
         width: 100%;
         height: auto;
-        padding: 100px 0 0 0;
+        padding: 100px 0;
 
         h4 {
             font-family: 'Montserrat';
@@ -51,8 +51,9 @@ section {
                 li {
                     position: relative;
                     float: left;
-                    width: 25%;
+                    width: 29%;
                     list-style: none;
+                    margin: 20px 2%;
 
                     &:before {
                         content: '';
