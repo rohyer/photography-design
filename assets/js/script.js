@@ -45,7 +45,7 @@ window.addEventListener('scroll', function(e) {
 	const sectionClients = document.getElementById('clients')
 	const sectionContact = document.getElementById('contact')
 
-	if (y >= sectionShow.offsetTop && y < sectionShow.offsetHeight - headerMenu) {
+	if (y >= sectionShow.offsetTop && y < sectionShow.offsetHeight - headerMenu - 1) {
 		const menuHeader = window.document.getElementById('menu-home')
 		menuHeader.classList.remove('header-menu-no-selected')
 		menuHeader.classList.add('header-menu-selected')
@@ -55,7 +55,7 @@ window.addEventListener('scroll', function(e) {
 		menuHeader.classList.add('header-menu-no-selected')
 	}
 
-	if (y >= sectionAbout.offsetTop - headerMenu && y < sectionAbout.offsetTop + sectionAbout.offsetHeight - headerMenu) {
+	if (y >= sectionAbout.offsetTop - headerMenu - 1 && y < sectionAbout.offsetTop + sectionAbout.offsetHeight - headerMenu) {
 		const menuAbout = window.document.getElementById('menu-about')
 		menuAbout.classList.remove('header-menu-no-selected')
 		menuAbout.classList.add('header-menu-selected')
@@ -75,7 +75,7 @@ window.addEventListener('scroll', function(e) {
 		menuServices.classList.add('header-menu-no-selected')
 	}
 
-	if (y >= sectionWork.offsetTop - headerMenu && y < sectionWork.offsetTop + sectionWork.offsetHeight - headerMenu) {
+	if (y >= sectionWork.offsetTop - headerMenu && y < sectionWork.offsetTop + sectionWork.offsetHeight - headerMenu - 2) {
 		const menuWork = window.document.getElementById('menu-work')
 		menuWork.classList.remove('header-menu-no-selected')
 		menuWork.classList.add('header-menu-selected')
@@ -85,7 +85,7 @@ window.addEventListener('scroll', function(e) {
 		menuWork.classList.add('header-menu-no-selected')
 	}
 
-	if (y >= sectionClients.offsetTop - headerMenu && y < sectionClients.offsetTop + sectionClients.offsetHeight - headerMenu) {
+	if (y >= sectionClients.offsetTop - headerMenu - 1 && y < sectionClients.offsetTop + sectionClients.offsetHeight - headerMenu - 1) {
 		const menuClients = window.document.getElementById('menu-clients')
 		menuClients.classList.remove('header-menu-no-selected')
 		menuClients.classList.add('header-menu-selected')
@@ -95,7 +95,7 @@ window.addEventListener('scroll', function(e) {
 		menuClients.classList.add('header-menu-no-selected')
 	}
 
-	if (y >= sectionContact.offsetTop - headerMenu && y < sectionContact.offsetTop + sectionContact.offsetHeight - headerMenu) {
+	if (y >= sectionContact.offsetTop - headerMenu - 1 && y < sectionContact.offsetTop + sectionContact.offsetHeight - headerMenu) {
 		const menuContact = window.document.getElementById('menu-contact')
 		menuContact.classList.remove('header-menu-no-selected')
 		menuContact.classList.add('header-menu-selected')
