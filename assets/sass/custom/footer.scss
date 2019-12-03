@@ -1,9 +1,10 @@
 footer {
+    font-family: 'Roboto';
     float: left;
     width: 100%;
     height: auto;
     padding: 75px 0;
-    background-color: #F0F0F0;
+    background-color: #3F3F3F;
 
     h6 {
         font-family: 'Montserrat';
@@ -11,19 +12,33 @@ footer {
         margin-bottom: 30px;
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
+    .footer-datas {
+        span {
+            i {
+                text-align: center;
+                font-size: 35px;
+                color: #FFFFFF;
+                width: 100%;
+                margin-bottom: 20px;
+            }
 
-        li {
-            list-style: none;
-            font-family: 'Roboto';
-            font-size: 16px;
-            margin-bottom: 10px;
+            p {
+                text-align: center;
+                font-size: 15px;
+                font-weight: 400;
+                color: #FFFFFF;
+                margin-bottom: 5px;
+            }
 
-            a{
-                text-transform: none;
-                color: initial;
+            h6 {
+                text-align: center;
+                font-family: 'Montserrat';
+                font-size: 22px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 300;
+                color: #FFFFFF;
+                margin-top: 75px;
             }
         }
     }

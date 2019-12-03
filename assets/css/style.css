@@ -13883,36 +13883,88 @@ section#clients {
 section#contact {
   float: left;
   width: 100%;
-  height: 500px;
+  height: auto;
   padding: 100px 0; }
   section#contact h4 {
     font-family: 'Montserrat';
     font-size: 30px;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  section#contact #section-contact-datas {
+    margin-top: 22px; }
+    section#contact #section-contact-datas p {
+      font-family: 'Roboto';
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 12px; }
+    section#contact #section-contact-datas i {
+      font-size: 20px;
+      color: #000000;
+      margin-right: 10px; }
+  section#contact #section-contact-form input, section#contact #section-contact-form textarea {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300; }
+    section#contact #section-contact-form input.contact-form, section#contact #section-contact-form textarea.contact-form {
+      padding: 10px 15px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 1.5px solid #999999;
+      outline: none;
+      transition-duration: .2s; }
+    section#contact #section-contact-form input#input-name, section#contact #section-contact-form textarea#input-name {
+      float: left;
+      width: 48%;
+      margin-right: 4%; }
+    section#contact #section-contact-form input#input-email, section#contact #section-contact-form textarea#input-email {
+      width: 48%; }
+    section#contact #section-contact-form input#input-text, section#contact #section-contact-form textarea#input-text {
+      width: 100%;
+      height: 200px; }
+    section#contact #section-contact-form input#input-submit, section#contact #section-contact-form textarea#input-submit {
+      width: 120px;
+      height: 45px;
+      font-weight: 400;
+      color: #FFFFFF;
+      background-color: #FD7070;
+      border: 1px solid #FD7070;
+      margin-top: 20px; }
 
 footer {
+  font-family: 'Roboto';
   float: left;
   width: 100%;
   height: auto;
   padding: 75px 0;
-  background-color: #F0F0F0; }
+  background-color: #3F3F3F; }
   footer h6 {
     font-family: 'Montserrat';
     font-size: 24px;
     margin-bottom: 30px; }
-  footer ul {
-    margin: 0;
-    padding: 0; }
-    footer ul li {
-      list-style: none;
-      font-family: 'Roboto';
-      font-size: 16px;
-      margin-bottom: 10px; }
-      footer ul li a {
-        text-transform: none;
-        color: initial; }
+  footer .footer-datas span i {
+    text-align: center;
+    font-size: 35px;
+    color: #FFFFFF;
+    width: 100%;
+    margin-bottom: 20px; }
+  footer .footer-datas span p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 5px; }
+  footer .footer-datas span h6 {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin-top: 75px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -48,11 +48,44 @@ function mytheme_customize_register( $wp_customize ) {
         ),
     ));
 
+    $wp_customize->add_setting( 'instagram' );
+
+    $wp_customize->add_control('instagram', array(
+        'type' => 'text',
+        'section' => 'section_contact',
+        'label' => __('Insira o link de seu instagram aqui', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('https://www.instagram.com/pagina/'),
+        ),
+    ));
+
+    $wp_customize->add_setting( 'linkedin' );
+
+    $wp_customize->add_control('linkedin', array(
+        'type' => 'text',
+        'section' => 'section_contact',
+        'label' => __('Insira o link de seu linkedin aqui', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('https://www.linkedin.com/pagina/'),
+        ),
+    ));
+
     // FOOTER
     $wp_customize->add_section(
         'section_footer', array(
         'title' => __( 'Footer', 'odin' ),
         'priority' => 202,
+    ));
+
+    $wp_customize->add_setting( 'name_section' );
+
+    $wp_customize->add_control('name_section', array(
+        'type' => 'text',
+        'section' => 'section_footer',
+        'label' => __('Insira seu nome ou da sua empresa', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('Arts & Photograpy'),
+        )
     ));
 
     $wp_customize->add_setting( 'email_section' );
@@ -76,6 +109,30 @@ function mytheme_customize_register( $wp_customize ) {
             'placeholder' => __('(99) 9999-9999'),
         ),
     ));
+
+    $wp_customize->add_setting( 'location_street_section' );
+
+    $wp_customize->add_control('location_street_section', array(
+        'type' => 'text',
+        'section' => 'section_footer',
+        'label' => __('Insira sua localização', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('Rua: tal, nº 12. Bairro: tal, cidade: tal'),
+        ),
+    ));
+
+    $wp_customize->add_setting( 'location_country_section' );
+
+    $wp_customize->add_control('location_country_section', array(
+        'type' => 'text',
+        'section' => 'section_footer',
+        'label' => __('Insira o estado e país em que a empresa reside', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('SP - Brazil'),
+        ),
+    ));
+
+
 
     $wp_customize->add_setting( 'contact_1_section_name' );
 
@@ -151,6 +208,7 @@ function mytheme_customize_register( $wp_customize ) {
             'placeholder' => __('Design'),
         )
     ));
+
 }
 
 add_action( 'customize_register', 'mytheme_customize_register');
