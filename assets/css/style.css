@@ -13957,14 +13957,26 @@ footer {
     font-weight: 400;
     color: #FFFFFF;
     margin-bottom: 5px; }
+    footer .footer-datas span p i {
+      float: left;
+      width: initial;
+      color: #FFFFFF;
+      font-size: 18px;
+      margin-right: 7px; }
   footer .footer-datas span h6 {
     text-align: center;
     font-family: 'Montserrat';
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 300;
     color: #FFFFFF;
     margin-top: 75px; }
+  footer #footer-social-media span i {
+    text-align: center;
+    float: left;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=style.css.map */
