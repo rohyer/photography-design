@@ -13,9 +13,9 @@ $args = array(
             </div>
 
             <ul id="work-menu" class="col-12 d-flex justify-content-center">
-                <li class="work-menu-selected">All</li>
-                <li><?php echo get_theme_mod( 'first_work_section' ); ?></li>
-                <li><?php echo get_theme_mod( 'second_work_section' ); ?></li>
+                <li id="work-menu-all" class="work-menu-selected">All</li>
+                <li id="work-menu-photography"><?php echo get_theme_mod( 'first_work_section' ); ?></li>
+                <li id="work-menu-design"><?php echo get_theme_mod( 'second_work_section' ); ?></li>
             </ul>
 
             <ul id="work-post">
@@ -26,6 +26,12 @@ $args = array(
                     $query->the_post();
             ?>
                 <li id="post-<?php the_ID(); ?>" class="work-post">
+                    <div class="work-title">
+                        <span><?php the_title(); ?></span>
+                    </div>
+                    <div class="work-open-img">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
                     <div class="work-img">
                         <?php the_post_thumbnail(); ?>
                     </div>

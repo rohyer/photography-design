@@ -106,39 +106,6 @@ window.addEventListener('scroll', function(e) {
 	}
 })
 
-window.addEventListener('scroll', function(e) {
-	const y = window.pageYOffset
-
-	const header = window.document.querySelector('header')
-	const headerHeight = header.offsetHeight
-
-	const currentSection = window.document.querySelectorAll('section.section-site')
-	const sectionShow = currentSection[0].offsetHeight
-	const sectionAbout = currentSection[1].offsetHeight
-	const sectionServices = currentSection[2].offsetHeight
-	const sectionWork = currentSection[3].offsetHeight
-	const sectionClients = currentSection[4].offsetHeight
-	const sectionContact = currentSection[5].offsetHeight
-
-	const menuHeader = window.document.getElementById('menu-home')
-	const menuAbout = window.document.getElementById('menu-about')
-	const menuServices = window.document.getElementById('menu-services')
-	const menuWork = window.document.getElementById('menu-work')
-	const menuClients = window.document.getElementById('menu-clients')
-	const menuContact = window.document.getElementById('menu-contact')
-
-})
-
-function changeFocusMenu(sec1, sec2, header, y, menuHeader) {
-	if (y >= sec1 && y < sec2 - header) {
-		menuHeader.classList.remove('header-menu-no-selected')
-		menuHeader.classList.add('header-menu-selected')
-	} else {
-		menuHeader.classList.add('header-menu-no-selected')
-		menuHeader.classList.remove('header-menu-selected')
-	}
-}
-
 // ================================================
 // ==================== HEADER ====================
 
@@ -195,3 +162,28 @@ function smoothScrollTo(endY, duration) {
 
 // ======================================================
 // ==================== CLICK SCROLL ====================
+
+// ======================================================
+// ==================== CLICK WORK ======================
+
+var workPhotography = window.document.querySelectorAll('#work-menu li')
+
+workPhotography.forEach(item => {
+	item.addEventListener('click', changeFocusWork)
+})
+
+function changeFocusWork(event) {
+	const workItem = event.target
+	const id = workItem.getAttribute('id')
+	const workItemAll = window.document.getElementById('work-menu-all').classList.remove('work-menu-selected')
+	const workItemPhotography = window.document.getElementById('work-menu-photography').classList.remove('work-menu-selected')
+	const workItemDesign = window.document.getElementById('work-menu-design').classList.remove('work-menu-selected')
+	const workItemFocused = window.document.getElementById(id)
+	console.log(workItemFocused)
+
+	workItemFocused.classList.add('work-menu-selected')
+}
+
+
+// ======================================================
+// ==================== CLICK WORK ======================
