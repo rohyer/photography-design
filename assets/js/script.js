@@ -32,30 +32,112 @@ window.addEventListener('scroll', function(e) {
     }
 })
 
+
+window.addEventListener('scroll', function(e) {
+	const y = window.pageYOffset
+	console.log('y' + y)
+
+	const headerMenu = document.getElementById('home').offsetHeight
+	const sectionShow = document.getElementById('show')
+	const sectionAbout = document.getElementById('about')
+	const sectionServices = document.getElementById('services')
+	const sectionWork = document.getElementById('work')
+	const sectionClients = document.getElementById('clients')
+	const sectionContact = document.getElementById('contact')
+
+	if (y >= sectionShow.offsetTop && y < sectionShow.offsetHeight - headerMenu) {
+		const menuHeader = window.document.getElementById('menu-home')
+		menuHeader.classList.remove('header-menu-no-selected')
+		menuHeader.classList.add('header-menu-selected')
+	} else {
+		const menuHeader = window.document.getElementById('menu-home')
+		menuHeader.classList.remove('header-menu-selected')
+		menuHeader.classList.add('header-menu-no-selected')
+	}
+
+	if (y >= sectionAbout.offsetTop - headerMenu && y < sectionAbout.offsetTop + sectionAbout.offsetHeight - headerMenu) {
+		const menuAbout = window.document.getElementById('menu-about')
+		menuAbout.classList.remove('header-menu-no-selected')
+		menuAbout.classList.add('header-menu-selected')
+	} else {
+		const menuAbout = window.document.getElementById('menu-about')
+		menuAbout.classList.remove('header-menu-selected')
+		menuAbout.classList.add('header-menu-no-selected')
+	}
+
+	if (y >= sectionServices.offsetTop - headerMenu && y < sectionServices.offsetTop + sectionServices.offsetHeight - headerMenu) {
+		const menuServices = window.document.getElementById('menu-services')
+		menuServices.classList.remove('header-menu-no-selected')
+		menuServices.classList.add('header-menu-selected')
+	} else {
+		const menuServices = window.document.getElementById('menu-services')
+		menuServices.classList.remove('header-menu-selected')
+		menuServices.classList.add('header-menu-no-selected')
+	}
+
+	if (y >= sectionWork.offsetTop - headerMenu && y < sectionWork.offsetTop + sectionWork.offsetHeight - headerMenu) {
+		const menuWork = window.document.getElementById('menu-work')
+		menuWork.classList.remove('header-menu-no-selected')
+		menuWork.classList.add('header-menu-selected')
+	} else {
+		const menuWork = window.document.getElementById('menu-work')
+		menuWork.classList.remove('header-menu-selected')
+		menuWork.classList.add('header-menu-no-selected')
+	}
+
+	if (y >= sectionClients.offsetTop - headerMenu && y < sectionClients.offsetTop + sectionClients.offsetHeight - headerMenu) {
+		const menuClients = window.document.getElementById('menu-clients')
+		menuClients.classList.remove('header-menu-no-selected')
+		menuClients.classList.add('header-menu-selected')
+	} else {
+		const menuClients = window.document.getElementById('menu-clients')
+		menuClients.classList.remove('header-menu-selected')
+		menuClients.classList.add('header-menu-no-selected')
+	}
+
+	if (y >= sectionContact.offsetTop - headerMenu && y < sectionContact.offsetTop + sectionContact.offsetHeight - headerMenu) {
+		const menuContact = window.document.getElementById('menu-contact')
+		menuContact.classList.remove('header-menu-no-selected')
+		menuContact.classList.add('header-menu-selected')
+	} else {
+		const menuContact = window.document.getElementById('menu-contact')
+		menuContact.classList.remove('header-menu-selected')
+		menuContact.classList.add('header-menu-no-selected')
+	}
+})
+
 window.addEventListener('scroll', function(e) {
 	const y = window.pageYOffset
 
 	const header = window.document.querySelector('header')
-	const menuHeader = window.document.getElementById('menu-home')
-	const show = window.document.getElementById('show')
 	const headerHeight = header.offsetHeight
-	const positionMenuHeader = show.offsetHeight
-	console.log(positionMenuHeader)
 
-	if ((y >= 0) && (y <= positionMenuHeader - headerHeight)) {
-		menuHeader.classList.add('header-menu-selected')
-	} else {
-		menuHeader.classList.remove('header-menu-selected')
-	}
+	const currentSection = window.document.querySelectorAll('section.section-site')
+	const sectionShow = currentSection[0].offsetHeight
+	const sectionAbout = currentSection[1].offsetHeight
+	const sectionServices = currentSection[2].offsetHeight
+	const sectionWork = currentSection[3].offsetHeight
+	const sectionClients = currentSection[4].offsetHeight
+	const sectionContact = currentSection[5].offsetHeight
 
-	// const menuAbout = window.document.getElementById('about')
-	// const menuServices = window.document.getElementById('services')
-	// const menuWork = window.document.getElementById('work')
-	// const menuClients = window.document.getElementById('clients')
-	// const menuContact = window.document.getElementById('contact')
-
+	const menuHeader = window.document.getElementById('menu-home')
+	const menuAbout = window.document.getElementById('menu-about')
+	const menuServices = window.document.getElementById('menu-services')
+	const menuWork = window.document.getElementById('menu-work')
+	const menuClients = window.document.getElementById('menu-clients')
+	const menuContact = window.document.getElementById('menu-contact')
 
 })
+
+function changeFocusMenu(sec1, sec2, header, y, menuHeader) {
+	if (y >= sec1 && y < sec2 - header) {
+		menuHeader.classList.remove('header-menu-no-selected')
+		menuHeader.classList.add('header-menu-selected')
+	} else {
+		menuHeader.classList.add('header-menu-no-selected')
+		menuHeader.classList.remove('header-menu-selected')
+	}
+}
 
 // ================================================
 // ==================== HEADER ====================

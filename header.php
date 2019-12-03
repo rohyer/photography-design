@@ -9,7 +9,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-    <header id="home">
+    <header id="home" class="section-site">
         <div class="container-custom">
             <div class="row">
                 <div id="logo" class="d-flex justify-content-center justify-content-md-start col-md-3 col-lg-3 col-xl-2">
@@ -19,8 +19,8 @@
                 <div id="header-menu" class="d-none d-md-flex col-md-9 col-lg-7 offset-lg-2 col-xl-7 offset-xl-3 justify-content-md-end">
 
                     <ul>
-                        <li class="header-menu-item"><a href="#home" id="menu-home">Home</a></li>
-                        <li class="header-menu-item"><a href="#about" id="menu-about">About</a></li>
+                        <li class="header-menu-item"><a href="#home" id="menu-home" class="header-menu-no-selected">Home</a></li>
+                        <li class="header-menu-item"><a href="#about" id="menu-about" class="header-menu-no-selected">About</a></li>
                         <li class="header-menu-item"><a href="#services" id="menu-services">Services</a></li>
                         <li class="header-menu-item"><a href="#work" id="menu-work">Work</a></li>
                         <li class="header-menu-item"><a href="#clients" id="menu-clients">Clients</a></li>

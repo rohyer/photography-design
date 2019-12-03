@@ -1,4 +1,4 @@
-<section id="clients">
+<section id="clients" class="section-site">
     <div class="container-custom">
         <div class="row">
             <div class="col-12">

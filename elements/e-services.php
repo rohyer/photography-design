@@ -4,7 +4,7 @@ $args = array(
 );
 ?>
 
-<section id="services">
+<section id="services" class="section-site">
     <div class="container-custom">
         <div class="row">
             <div class="col-12">

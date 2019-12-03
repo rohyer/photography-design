@@ -9,7 +9,7 @@ if ( $query->have_posts() ) {
 }
 ?>
 
-<section id="about">
+<section id="about" class="section-site">
     <div class="container-custom">
         <div class="row">
             <div class="col-12">
