@@ -75,3 +75,14 @@
         transition: all 0.2s ease-in-out 0s;
     }
 }
+
+.no-selected-img-work-opacity {
+    opacity: 0%;
+    transition-duration: .2s;
+}
+
+.no-selected-img-work {
+    width: 0% !important;
+    margin: 0% !important;
+    opacity: 0% !important;
+}

@@ -55,6 +55,8 @@ section {
                     width: 29%;
                     list-style: none;
                     margin: 20px 2%;
+                    opacity: 100%;
+                    transition-duration: .6s;
 
                     &:before {
                         content: '';

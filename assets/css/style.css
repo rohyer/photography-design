@@ -13659,6 +13659,15 @@ readers do not read off random characters that represent icons */
     -webkit-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s; }
 
+.no-selected-img-work-opacity {
+  opacity: 0%;
+  transition-duration: .2s; }
+
+.no-selected-img-work {
+  width: 0% !important;
+  margin: 0% !important;
+  opacity: 0% !important; }
+
 header {
   position: absolute;
   width: 100%;
@@ -13844,7 +13853,9 @@ section#work {
       float: left;
       width: 29%;
       list-style: none;
-      margin: 20px 2%; }
+      margin: 20px 2%;
+      opacity: 100%;
+      transition-duration: .6s; }
       section#work ul#work-post li:before {
         content: '';
         display: block;

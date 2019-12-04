@@ -175,13 +175,48 @@ workPhotography.forEach(item => {
 function changeFocusWork(event) {
 	const workItem = event.target
 	const id = workItem.getAttribute('id')
+
 	const workItemAll = window.document.getElementById('work-menu-all').classList.remove('work-menu-selected')
+
 	const workItemPhotography = window.document.getElementById('work-menu-photography').classList.remove('work-menu-selected')
+
 	const workItemDesign = window.document.getElementById('work-menu-design').classList.remove('work-menu-selected')
+
 	const workItemFocused = window.document.getElementById(id)
 	console.log(workItemFocused)
-
 	workItemFocused.classList.add('work-menu-selected')
+
+	if (workItemFocused.id == 'work-menu-photography') {
+		const categoryDesign = window.document.querySelectorAll('li.work-post.category-design')
+		categoryDesign[0].classList.add('no-selected-img-work')
+		categoryDesign[1].classList.add('no-selected-img-work')
+		categoryDesign[2].classList.add('no-selected-img-work')
+
+		const categoryPhotography = window.document.querySelectorAll('li.work-post.category-photography')
+		categoryPhotography[0].classList.remove('no-selected-img-work')
+		categoryPhotography[1].classList.remove('no-selected-img-work')
+		categoryPhotography[2].classList.remove('no-selected-img-work')
+	} else if (workItemFocused.id == 'work-menu-design') {
+		const categoryPhotography = window.document.querySelectorAll('li.work-post.category-photography')
+		categoryPhotography[0].classList.add('no-selected-img-work')
+		categoryPhotography[1].classList.add('no-selected-img-work')
+		categoryPhotography[2].classList.add('no-selected-img-work')
+
+		const categoryDesign = window.document.querySelectorAll('li.work-post.category-design')
+		categoryDesign[0].classList.remove('no-selected-img-work')
+		categoryDesign[1].classList.remove('no-selected-img-work')
+		categoryDesign[2].classList.remove('no-selected-img-work')
+	} else if (workItemFocused.id == 'work-menu-all'){
+		const categoryDesign = window.document.querySelectorAll('li.work-post.category-design')
+		categoryDesign[0].classList.remove('no-selected-img-work')
+		categoryDesign[1].classList.remove('no-selected-img-work')
+		categoryDesign[2].classList.remove('no-selected-img-work')
+
+		const categoryPhotography = window.document.querySelectorAll('li.work-post.category-photography')
+		categoryPhotography[0].classList.remove('no-selected-img-work')
+		categoryPhotography[1].classList.remove('no-selected-img-work')
+		categoryPhotography[2].classList.remove('no-selected-img-work')
+	}
 }
 
 

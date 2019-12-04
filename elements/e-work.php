@@ -25,7 +25,7 @@ $args = array(
                 while ( $query->have_posts() ) {
                     $query->the_post();
             ?>
-                <li id="post-<?php the_ID(); ?>" class="work-post">
+                <li id="post-<?php the_ID(); ?>" <?php post_class('work-post') ?>>
                     <div class="work-title">
                         <span><?php the_title(); ?></span>
                     </div>
