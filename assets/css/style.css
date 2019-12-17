@@ -13845,18 +13845,18 @@ section#work {
       padding: 2px 6px;
       border-radius: 5px;
       cursor: pointer; }
-  section#work ul#work-post {
+  section#work ul#work-post, section#work ul#work-photography, section#work ul#work-design {
     margin: 0;
     padding: 0; }
-    section#work ul#work-post li {
+    section#work ul#work-post li, section#work ul#work-photography li, section#work ul#work-design li {
       position: relative;
       float: left;
-      width: 29%;
+      width: 28%;
       list-style: none;
       margin: 20px 2%;
       opacity: 100%;
       transition-duration: .6s; }
-      section#work ul#work-post li:before {
+      section#work ul#work-post li:before, section#work ul#work-photography li:before, section#work ul#work-design li:before {
         content: '';
         display: block;
         position: absolute;
@@ -13866,7 +13866,7 @@ section#work {
         height: 0%;
         background-color: rgba(255, 255, 255, 0.7);
         transition-duration: .8s; }
-      section#work ul#work-post li:hover:before {
+      section#work ul#work-post li:hover:before, section#work ul#work-photography li:hover:before, section#work ul#work-design li:hover:before {
         content: '';
         display: block;
         position: absolute;
@@ -13875,15 +13875,15 @@ section#work {
         width: 86%;
         height: 86%;
         background-color: rgba(255, 255, 255, 0.7); }
-      section#work ul#work-post li:hover .work-title {
+      section#work ul#work-post li:hover .work-title, section#work ul#work-photography li:hover .work-title, section#work ul#work-design li:hover .work-title {
         top: 40%;
         visibility: visible;
         opacity: 100%; }
-      section#work ul#work-post li:hover .work-open-img {
+      section#work ul#work-post li:hover .work-open-img, section#work ul#work-photography li:hover .work-open-img, section#work ul#work-design li:hover .work-open-img {
         top: 60%;
         visibility: visible;
         opacity: 100%; }
-      section#work ul#work-post li .work-title {
+      section#work ul#work-post li .work-title, section#work ul#work-photography li .work-title, section#work ul#work-design li .work-title {
         position: absolute;
         top: 30%;
         font-family: 'Montserrat';
@@ -13895,7 +13895,7 @@ section#work {
         transition-duration: .7s;
         visibility: hidden;
         opacity: 0%; }
-      section#work ul#work-post li .work-open-img {
+      section#work ul#work-post li .work-open-img, section#work ul#work-photography li .work-open-img, section#work ul#work-design li .work-open-img {
         position: absolute;
         top: 80%;
         width: 100%;
@@ -13903,18 +13903,18 @@ section#work {
         transition-duration: .7s;
         visibility: hidden;
         opacity: 0%; }
-        section#work ul#work-post li .work-open-img button {
+        section#work ul#work-post li .work-open-img button, section#work ul#work-photography li .work-open-img button, section#work ul#work-design li .work-open-img button {
           cursor: pointer;
           width: 40px;
           height: 35px;
           background-color: #FD7070;
           border: none;
           transition-duration: .5s; }
-          section#work ul#work-post li .work-open-img button:hover {
+          section#work ul#work-post li .work-open-img button:hover, section#work ul#work-photography li .work-open-img button:hover, section#work ul#work-design li .work-open-img button:hover {
             background-color: #757575; }
-          section#work ul#work-post li .work-open-img button i {
+          section#work ul#work-post li .work-open-img button i, section#work ul#work-photography li .work-open-img button i, section#work ul#work-design li .work-open-img button i {
             color: #FFFFFF; }
-      section#work ul#work-post li .work-img img {
+      section#work ul#work-post li .work-img img, section#work ul#work-photography li .work-img img, section#work ul#work-design li .work-img img {
         width: 100%;
         height: auto; }
 
@@ -13925,9 +13925,9 @@ section#clients {
   height: 500px;
   padding: 115px 0;
   background-color: #F9F9F9;
-  background-image: url(../img/clients/back-mountain.jpg);
-  background-size: 100%;
-  background-position-y: -80px;
+  background-image: url(../img/clients/back-mountain-2.jpg);
+  background-size: cover;
+  background-position-y: center;
   background-attachment: fixed; }
   section#clients:before {
     background-color: rgba(39, 39, 39, 0.65);

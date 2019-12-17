@@ -6,9 +6,9 @@ section {
         height: 500px;
         padding: 115px 0;
         background-color: #F9F9F9;
-        background-image: url(../img/clients/back-mountain.jpg);
-        background-size: 100%;
-        background-position-y: -80px;
+        background-image: url(../img/clients/back-mountain-2.jpg);
+        background-size: cover;
+        background-position-y: center;
         background-attachment: fixed;
 
         &:before {

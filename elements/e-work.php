@@ -1,6 +1,10 @@
 <?php
-$args = array(
-    'category_name' => 'work'
+$args_design = array(
+    'category_name' => 'design-work'
+);
+
+$args_photography = array(
+    'category_name' => 'photography-work'
 );
 ?>
 
@@ -18,7 +22,55 @@ $args = array(
                 <li id="work-menu-design"><?php echo get_theme_mod( 'second_work_section' ); ?></li>
             </ul>
 
-            <ul id="work-post">
+            <ul id="work-photography" class="d-flex justify-content-center">
+            <?php 
+            $query_photography = new WP_Query( $args_photography );
+            if ( $query_photography->have_posts() ) {
+                while ( $query_photography->have_posts() ) {
+                    $query_photography->the_post();
+            ?>
+                <li id="post-<?php the_ID(); ?>" <?php post_class('work-post') ?>>
+                    <div class="work-title">
+                        <span><?php the_title(); ?></span>
+                    </div>
+                    <div class="work-open-img">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="work-img">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </li>
+            <?php
+                }
+            }
+            ?>
+            </ul>
+
+            <ul id="work-design" class="d-flex justify-content-center">
+            <?php 
+            $query_design = new WP_Query( $args_design );
+            if ( $query_design->have_posts() ) {
+                while ( $query_design->have_posts() ) {
+                    $query_design->the_post();
+            ?>
+                <li id="post-<?php the_ID(); ?>" <?php post_class('work-post') ?>>
+                    <div class="work-title">
+                        <span><?php the_title(); ?></span>
+                    </div>
+                    <div class="work-open-img">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="work-img">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </li>
+            <?php
+                }
+            }
+            ?>
+            </ul>
+
+            <!-- <ul id="work-post">
             <?php 
             $query = new WP_Query( $args );
             if ( $query->have_posts() ) {
@@ -40,7 +92,7 @@ $args = array(
                 }
             }
             ?>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </section>
