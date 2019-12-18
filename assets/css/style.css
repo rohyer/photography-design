@@ -13722,13 +13722,10 @@ header {
 
 section#show {
   width: 100%;
-  height: auto;
-  position: relative; }
-  section#show #image-show {
-    width: 100%;
-    height: 724px;
-    background-image: url(../img/main.jpg);
-    background-size: cover; }
+  position: relative;
+  height: 724px;
+  background-image: url(../img/main.jpg);
+  background-size: cover; }
   section#show:before {
     background-color: rgba(39, 39, 39, 0.72);
     content: '';
@@ -13738,6 +13735,46 @@ section#show {
     position: absolute;
     left: 0;
     top: 0; }
+  section#show #welcome-phrase {
+    position: absolute;
+    top: 275px;
+    left: 300px; }
+    @media (max-width: 1200px) and (min-width: 992px) {
+      section#show #welcome-phrase {
+        left: 250px; } }
+    @media (max-width: 991px) and (min-width: 768px) {
+      section#show #welcome-phrase {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 430px;
+        height: 150px;
+        text-align: center; } }
+    @media (max-width: 767px) {
+      section#show #welcome-phrase {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 430px;
+        height: 150px;
+        text-align: center; } }
+    section#show #welcome-phrase h2 {
+      font-family: 'Montserrat';
+      font-size: 55px;
+      color: #FFFFFF;
+      margin: 0; }
+      @media (max-width: 576px) {
+        section#show #welcome-phrase h2 {
+          font-size: 40px; } }
+    section#show #welcome-phrase span {
+      font-family: 'Montserrat';
+      font-size: 55px;
+      color: #FD7070; }
+      @media (max-width: 576px) {
+        section#show #welcome-phrase span {
+          font-size: 40px; } }
 
 section#about {
   float: left;

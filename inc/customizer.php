@@ -198,6 +198,31 @@ function mytheme_customize_register( $wp_customize ) {
         ),
     ));
 
+    // =======================================
+    // =========== WELCOME MESSAGE ===========
+    $wp_customize->add_section(
+        'section_welcome', array(
+        'title' => __( 'Welcome message', 'odin' ),
+        'priority' => 207,
+    ));
+
+    $wp_customize->add_setting('hide_iam', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('hide_iam', array(
+        'type' => 'radio',
+        'section' => 'section_welcome',
+        'label' => __('Choice an option for a message about you or your team'),
+        'choices' => array(
+            'value1' => __( "I'm" ),
+            'value2' => __( "I am" ),
+            'value3' => __( "we're" ),
+            'value4' => __( "we are" )
+        )
+    ));
+
 }
 
 add_action( 'customize_register', 'mytheme_customize_register' );
