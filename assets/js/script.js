@@ -271,12 +271,61 @@ function changeFocusWork(event) {
 
 var designShow = document.getElementById('design-show');
 var photographyShow = document.getElementById('photography-show');
-var textArray = [designShow.innerHTML, photographyShow.innerHTML]
+var firstQualityShow = document.getElementById('first-quality');
+var secondQualityShow = document.getElementById('second-quality');
+
+if (designShow != null && photographyShow != null) {
+	if (firstQualityShow != null && secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, photographyShow.innerHTML, firstQualityShow.innerHTML, secondQualityShow.innerHTML]
+		console.log(1)
+	} else if (firstQualityShow != null && !secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, photographyShow.innerHTML, firstQualityShow.innerHTML]
+		console.log(2)
+	} else if (!firstQualityShow != null && secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, photographyShow.innerHTML, secondQualityShow.innerHTML]
+		console.log(3)
+	} else if (!firstQualityShow != null && !secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, photographyShow.innerHTML]
+		console.log(4)
+	}
+// } else if (designShow != null && !photographyShow != null) {
+// 	if (firstQualityShow != null) {
+// 		var textArray = [designShow.innerHTML, firstQualityShow.innerHTML]
+// 	} else {
+// 		var textArray = [designShow.innerHTML]
+// 	}
+// } else if (!designShow != null && photographyShow != null) {
+// 	if (firstQualityShow != null) {
+// 		var textArray = [photographyShow.innerHTML, firstQualityShow.innerHTML]
+// 	} else if (!firstQualityShow != null) {
+// 		var textArray = [photographyShow.innerHTML]
+// 	}
+}
+
+console.log(designShow)
+console.log(photographyShow)
+console.log(firstQualityShow)
+console.log(secondQualityShow)
 
 
 function escrever(str, done) {
 	designShow.innerHTML = ''
-	photographyShow.innerHTML = ''
+
+	if (photographyShow != null && firstQualityShow != null && secondQualityShow != null) {
+		photographyShow.innerHTML = ''
+		firstQualityShow.innerHTML = ''
+		secondQualityShow.innerHTML = ''
+	} else if (!photographyShow != null && firstQualityShow != null && secondQualityShow != null) {
+		firstQualityShow.innerHTML = ''
+		secondQualityShow.innerHTML = ''
+	} else if (!photographyShow != null && firstQualityShow != null && !secondQualityShow != null) {
+		firstQualityShow.innerHTML = ''
+	} else if (!photographyShow != null && !firstQualityShow != null && secondQualityShow != null) {
+		secondQualityShow.innerHTML = ''
+	} else if (photographyShow != null && !firstQualityShow != null && !secondQualityShow != null) {
+		photographyShow.innerHTML = ''
+	}
+
     var char = str.split('').reverse();
     var typer = setInterval(function() {
         if (!char.length) {
