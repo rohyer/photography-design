@@ -281,11 +281,11 @@ function escrever(str, done) {
     var typer = setInterval(function() {
         if (!char.length) {
             clearInterval(typer);
-            return setTimeout(done, 500); // só para esperar um bocadinho
+            return setTimeout(done, 1500); // só para esperar um bocadinho
         }
         var next = char.pop();
         designShow.innerHTML += next;
-    }, 100);
+    }, 50);
 }
 
 function limpar(done) {
@@ -297,7 +297,7 @@ function limpar(done) {
             return done();
         }
         designShow.innerHTML = char.slice(0, nr);
-    }, 100);
+    }, 50);
 }
 
 function rodape(conteudos, el) {

@@ -1,6 +1,6 @@
 <?php
 $args = array(
-    'category_name' => 'about'
+    'category_name' => 'about us'
 );
 
 $query = new WP_Query( $args );
