@@ -29,8 +29,12 @@ section {
             font-size: 16px;
             font-weight: 300;
             text-align: center;
-            width: 65%;
             margin: 0 auto;
+            width: 65%;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
         }
     }
 }

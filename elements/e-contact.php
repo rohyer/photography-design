@@ -5,7 +5,7 @@
                 <h4>Contact</h4>
             </div>
 
-            <div class="col-3" id="section-contact-datas">
+            <div class="d-none d-lg-block col-lg-3" id="section-contact-datas">
                 <p><?php echo get_theme_mod( 'email' ); ?></p>
                 <p><?php echo get_theme_mod( 'telefone' ); ?></p>
 
@@ -20,7 +20,7 @@
                 <a href="<?php echo get_theme_mod( 'linkedin' ); ?>"><i class="fab fa-linkedin-in"></i></a>
             </div>
 
-            <div class="col-9" id="section-contact-form">
+            <div class="col-12 col-lg-9" id="section-contact-form">
                 <?php echo do_shortcode('[contact-form-7 id="31" title="Formulário de contato 1"]'); ?>
             </div>
         </div>

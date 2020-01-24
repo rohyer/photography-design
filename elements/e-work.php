@@ -16,11 +16,16 @@ $args_photography = array(
                 <h4>Portfolio</h4>
             </div>
 
+            <?php $first_work_section = get_theme_mod("first_work_section", 0); ?>
+            <?php $second_work_section = get_theme_mod("second_work_section", 0); ?>
+
+            <?php if ($first_work_section != '' && $second_work_section != ''){ ?>
             <ul id="work-menu" class="col-12 d-flex justify-content-center">
                 <li id="work-menu-all" class="work-menu-selected">All</li>
                 <li id="work-menu-photography"><?php echo get_theme_mod( 'first_work_section' ); ?></li>
                 <li id="work-menu-design"><?php echo get_theme_mod( 'second_work_section' ); ?></li>
             </ul>
+            <?php }?>
 
             <ul id="work-photography" class="d-flex justify-content-center">
             <?php 
