@@ -207,34 +207,34 @@ function changeFocusWork(event) {
 
 	if (workItemFocused.id == 'work-menu-photography') {
 		const categoryDesign = window.document.querySelectorAll('li.work-post.category-design-work')
-		categoryDesign[0].classList.add('no-selected-img-work')
-		categoryDesign[1].classList.add('no-selected-img-work')
-		categoryDesign[2].classList.add('no-selected-img-work')
+		categoryDesign.forEach(function(element) {
+			element.classList.add('no-selected-img-work')
+		})
 
 		const categoryPhotography = window.document.querySelectorAll('li.work-post.category-photography-work')
-		categoryPhotography[0].classList.remove('no-selected-img-work')
-		categoryPhotography[1].classList.remove('no-selected-img-work')
-		categoryPhotography[2].classList.remove('no-selected-img-work')
+		categoryPhotography.forEach(function(element) {
+			element.classList.remove('no-selected-img-work')
+		})
 	} else if (workItemFocused.id == 'work-menu-design') {
 		const categoryPhotography = window.document.querySelectorAll('li.work-post.category-photography-work')
-		categoryPhotography[0].classList.add('no-selected-img-work')
-		categoryPhotography[1].classList.add('no-selected-img-work')
-		categoryPhotography[2].classList.add('no-selected-img-work')
+		categoryPhotography.forEach(function(element) {
+			element.classList.add('no-selected-img-work')
+		})
 		
 		const categoryDesign = window.document.querySelectorAll('li.work-post.category-design-work')
-		categoryDesign[0].classList.remove('no-selected-img-work')
-		categoryDesign[1].classList.remove('no-selected-img-work')
-		categoryDesign[2].classList.remove('no-selected-img-work')
+		categoryDesign.forEach(function(element) {
+			element.classList.remove('no-selected-img-work')
+		})
 	} else if (workItemFocused.id == 'work-menu-all'){
 		const categoryDesign = window.document.querySelectorAll('li.work-post.category-design-work')
-		categoryDesign[0].classList.remove('no-selected-img-work')
-		categoryDesign[1].classList.remove('no-selected-img-work')
-		categoryDesign[2].classList.remove('no-selected-img-work')
+		categoryDesign.forEach(function(element) {
+			element.classList.remove('no-selected-img-work')
+		})
 
 		const categoryPhotography = window.document.querySelectorAll('li.work-post.category-photography-work')
-		categoryPhotography[0].classList.remove('no-selected-img-work')
-		categoryPhotography[1].classList.remove('no-selected-img-work')
-		categoryPhotography[2].classList.remove('no-selected-img-work')
+		categoryPhotography.forEach(function(element) {
+			element.classList.remove('no-selected-img-work')
+		})
 	}
 }
 
@@ -277,37 +277,24 @@ var secondQualityShow = document.getElementById('second-quality');
 if (designShow != null && photographyShow != null) {
 	if (firstQualityShow != null && secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, photographyShow.innerHTML, firstQualityShow.innerHTML, secondQualityShow.innerHTML]
-		console.log(1)
 	} else if (firstQualityShow != null && !secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, photographyShow.innerHTML, firstQualityShow.innerHTML]
-		console.log(2)
 	} else if (!firstQualityShow != null && secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, photographyShow.innerHTML, secondQualityShow.innerHTML]
-		console.log(3)
 	} else if (!firstQualityShow != null && !secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, photographyShow.innerHTML]
-		console.log(4)
 	}
 } else if (designShow != null && !photographyShow != null) {
 	if (firstQualityShow != null && secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, firstQualityShow.innerHTML, secondQualityShow.innerHTML]
-		console.log(1)
 	} else if (firstQualityShow != null && !secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, firstQualityShow.innerHTML]
-		console.log(2)
 	} else if (!firstQualityShow != null && secondQualityShow != null) {
 		var textArray = [designShow.innerHTML, secondQualityShow.innerHTML]
-		console.log(3)
 	} else if (!firstQualityShow != null && !secondQualityShow != null) {
 		var textArray = [designShow.innerHTML]
-		console.log(4)
 	}
 }
-
-console.log(designShow)
-console.log(photographyShow)
-console.log(firstQualityShow)
-console.log(secondQualityShow)
 
 
 function escrever(str, done) {

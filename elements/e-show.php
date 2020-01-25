@@ -4,20 +4,50 @@
     <!-- <div id="image-show"> -->
     <div id="welcome-phrase">
     <?php $hide_iam = get_theme_mod( "hide_iam", 0 ); ?>
-    <?php $hide_weare = get_theme_mod( "hide_weare", 0 ); ?>
+    <?php $main_work = get_theme_mod( "main_work", 0 ); ?>
+    <?php $secondary_work = get_theme_mod( "secondary_work", 0 ); ?>
+    <?php $first_quality = get_theme_mod( "first_quality", 0 ); ?>
+    <?php $second_quality = get_theme_mod( "second_quality", 0 ); ?>
 
+    <h2><?php echo get_theme_mod( 'name_company' ) ?></h2>
     <?php if ( $hide_iam === 'value1' ) { ?>
-        <h2>Arts & Photography</h2><span>Hello, I'm </span><span id="design-show" class="d-p-design">designers </span><span id='photography-show' class="d-p-design">photographers</span>
-    <?php } elseif ( $hide_iam === 'value2' ) { ?>
-        <h2>Arts & Photography</h2><span>Hello, I am </span><span id="design-show" class="d-p-design">designers </span><span id='photography-show' class="d-p-design">photographers</span>
+        <span>Hello, I'm </span>
 
-    <?php } elseif ( $hide_iam === 'value3' ) { ?>
-        <h2>Arts & Photography</h2><span>Hello, we're </span><span id="design-show" class="d-p-design">designers </span><span id='photography-show' class="d-p-design">photographers</span>
-        <span id='first-quality' class="d-p-design">creatives</span>
-        <span id='second-quality' class="d-p-design">details</span>
+        <?php if ( $main_work != '') { ?>
+            <span id="design-show" class="d-p-design"><?php echo get_theme_mod( 'main_work' ); ?> </span>
+        <?php } ?>
+
+        <?php if ( $secondary_work != '') { ?>
+            <span id='photography-show' class="d-p-design"><?php echo get_theme_mod( 'secondary_work' ); ?></span>
+        <?php } ?>
+
+        <?php if ( $first_quality != '') { ?>
+            <span id='first-quality' class="d-p-design"><?php echo get_theme_mod( 'first_quality' ); ?></span>
+        <?php } ?>
         
-    <?php } elseif ( $hide_iam === 'value4' ) { ?>
-        <h2>Arts & Photography</h2><span>Hello, we are </span><span id="design-show" class="d-p-design">designers </span><span id='photography-show' class="d-p-design">photographers</span>
+        <?php if ( $second_quality != '') { ?>
+            <span id='second-quality' class="d-p-design"><?php echo get_theme_mod( 'second_quality' ); ?></span>
+        <?php } ?>
+
+    <?php } elseif ( $hide_iam === 'value2' ) { ?>
+        <span>Hello, we're </span>
+
+        <?php if ( $main_work != '') { ?>
+            <span id="design-show" class="d-p-design"><?php echo get_theme_mod( 'main_work' ); ?> </span>
+        <?php } ?>
+
+        <?php if ( $secondary_work != '') { ?>
+            <span id='photography-show' class="d-p-design"><?php echo get_theme_mod( 'secondary_work' ); ?></span>
+        <?php } ?>
+
+        <?php if ( $first_quality != '') { ?>
+            <span id='first-quality' class="d-p-design"><?php echo get_theme_mod( 'first_quality' ); ?></span>
+        <?php } ?>
+        
+        <?php if ( $second_quality != '') { ?>
+            <span id='second-quality' class="d-p-design"><?php echo get_theme_mod( 'second_quality' ); ?></span>
+        <?php } ?>
+
     <?php } ?>
     </div>
     <!-- </div> -->

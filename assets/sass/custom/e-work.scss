@@ -45,7 +45,8 @@ section {
                 }
             }
 
-            &#work-post, &#work-photography, &#work-design {
+            &#work-post, &#work-photography-design {
+                flex-wrap: wrap;
                 margin: 0;
                 padding: 0;
 

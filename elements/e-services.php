@@ -25,7 +25,6 @@ $args = array(
                         </div>
                         <div class="services-content">
                             <span><?php the_title(); ?></span>
-                            <p><?php the_content() ?></p>
                         </div>
                     </li>
                     <?php

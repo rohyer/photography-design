@@ -217,12 +217,68 @@ function mytheme_customize_register( $wp_customize ) {
         'label' => __('Choice an option for a message about you or your team'),
         'choices' => array(
             'value1' => __( "I'm" ),
-            'value2' => __( "I am" ),
-            'value3' => __( "we're" ),
-            'value4' => __( "we are" )
+            'value2' => __( "we're" ),
         )
     ));
 
+    $wp_customize->add_setting('main_work', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('main_work', array(
+        'type' => 'text',
+        'section' => 'section_welcome',
+        'label' => __('Main work (required field)')
+    ));
+
+    $wp_customize->add_setting('secondary_work', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('secondary_work', array(
+        'type' => 'text',
+        'section' => 'section_welcome',
+        'label' => __('Secondary work')
+    ));
+
+    $wp_customize->add_setting('first_quality', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('first_quality', array(
+        'type' => 'text',
+        'section' => 'section_welcome',
+        'label' => __('type in one word a qualitie of yours or of your team')
+    ));
+
+    $wp_customize->add_setting('second_quality', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('second_quality', array(
+        'type' => 'text',
+        'section' => 'section_welcome',
+        'label' => __('type in one word another qualitie of yours or of your team')
+    ));
+
+    // $wp_customize->add_setting('hide_qualities_message', array(
+    //     'default' => '',
+    //     'capability' => 'edit_theme_options',
+    //     'sanitize_callback' => 'sanitize_text_field'
+    // ));
+    // $wp_customize->add_control('hide_qualities_message', array(
+    //     'type' => 'text',
+    //     'section' => 'section_welcome',
+    //     'label' => __('Choice what qualities you or your team have'),
+    //     'input_attrs' => array(
+    //         'placeholder' => __('https://www.twitter.com/pagina/'),
+    //     ),
+    // ));
+    
 }
 
 add_action( 'customize_register', 'mytheme_customize_register' );
