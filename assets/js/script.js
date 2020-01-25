@@ -288,18 +288,20 @@ if (designShow != null && photographyShow != null) {
 		var textArray = [designShow.innerHTML, photographyShow.innerHTML]
 		console.log(4)
 	}
-// } else if (designShow != null && !photographyShow != null) {
-// 	if (firstQualityShow != null) {
-// 		var textArray = [designShow.innerHTML, firstQualityShow.innerHTML]
-// 	} else {
-// 		var textArray = [designShow.innerHTML]
-// 	}
-// } else if (!designShow != null && photographyShow != null) {
-// 	if (firstQualityShow != null) {
-// 		var textArray = [photographyShow.innerHTML, firstQualityShow.innerHTML]
-// 	} else if (!firstQualityShow != null) {
-// 		var textArray = [photographyShow.innerHTML]
-// 	}
+} else if (designShow != null && !photographyShow != null) {
+	if (firstQualityShow != null && secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, firstQualityShow.innerHTML, secondQualityShow.innerHTML]
+		console.log(1)
+	} else if (firstQualityShow != null && !secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, firstQualityShow.innerHTML]
+		console.log(2)
+	} else if (!firstQualityShow != null && secondQualityShow != null) {
+		var textArray = [designShow.innerHTML, secondQualityShow.innerHTML]
+		console.log(3)
+	} else if (!firstQualityShow != null && !secondQualityShow != null) {
+		var textArray = [designShow.innerHTML]
+		console.log(4)
+	}
 }
 
 console.log(designShow)
@@ -318,12 +320,20 @@ function escrever(str, done) {
 	} else if (!photographyShow != null && firstQualityShow != null && secondQualityShow != null) {
 		firstQualityShow.innerHTML = ''
 		secondQualityShow.innerHTML = ''
+	} else if (photographyShow != null & !firstQualityShow != null && secondQualityShow != null) {
+		photographyShow.innerHTML = ''
+		secondQualityShow.innerHTML = ''
+	} else if (photographyShow != null & firstQualityShow != null && !secondQualityShow != null) {
+		photographyShow.innerHTML = ''
+		firstQualityShow.innerHTML = ''
 	} else if (!photographyShow != null && firstQualityShow != null && !secondQualityShow != null) {
 		firstQualityShow.innerHTML = ''
 	} else if (!photographyShow != null && !firstQualityShow != null && secondQualityShow != null) {
 		secondQualityShow.innerHTML = ''
 	} else if (photographyShow != null && !firstQualityShow != null && !secondQualityShow != null) {
 		photographyShow.innerHTML = ''
+	} else if (!photographyShow != null && !firstQualityShow != null && !secondQualityShow != null) {
+		designShow.innerHTML = ''
 	}
 
     var char = str.split('').reverse();
