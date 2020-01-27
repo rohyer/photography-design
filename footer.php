@@ -1,7 +1,7 @@
 <footer>
     <div class="container-custom">
         <div class="row">
-            <div class="footer-datas col-4 d-flex justify-content-center">
+            <div class="footer-datas col-12 col-sm-4 d-flex justify-content-center">
                 <span>
                     <i class="fas fa-phone"></i>
                     <p><?php echo get_theme_mod( 'telefone' ) ?></p>
@@ -12,14 +12,14 @@
                     <?php } ?>
                 </span>
             </div>
-            <div class="footer-datas col-4 d-flex justify-content-center">
+            <div class="footer-datas col-12 col-sm-4 d-flex justify-content-center">
                 <span>
                     <i class="fas fa-map-marker-alt"></i>
                     <p><?php echo get_theme_mod( 'location_street_section' ) ?></p>
                     <p><?php echo get_theme_mod( 'location_country_section' ) ?></p>
                 </span>
             </div>
-            <div class="footer-datas col-4 d-flex justify-content-center">
+            <div class="footer-datas col-12 col-sm-4 d-flex justify-content-center">
                 <span>
                     <i class="fas fa-envelope"></i>
                     <p><?php echo get_theme_mod( 'email' ) ?></p>

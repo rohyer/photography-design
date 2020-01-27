@@ -6985,9 +6985,9 @@ a.text-dark:hover, a.text-dark:focus {
     zoom: 1;
     *display: inline; }
     .owl-theme .owl-dots .owl-dot span {
-      width: 10px;
-      height: 10px;
-      margin: 5px 7px;
+      width: 25px;
+      height: 3px;
+      margin: 5px 5px;
       background: #D6D6D6;
       display: block;
       -webkit-backface-visibility: visible;
@@ -7029,9 +7029,9 @@ a.text-dark:hover, a.text-dark:focus {
     zoom: 1;
     *display: inline; }
     .owl-theme .owl-dots .owl-dot span {
-      width: 10px;
-      height: 10px;
-      margin: 5px 7px;
+      width: 25px;
+      height: 3px;
+      margin: 5px 5px;
       background: #D6D6D6;
       display: block;
       -webkit-backface-visibility: visible;
@@ -13805,6 +13805,9 @@ section#about {
   width: 100%;
   height: auto;
   padding: 100px 0; }
+  @media (max-width: 768px) {
+    section#about {
+      padding: 90px 0; } }
   section#about h4 {
     font-family: 'Montserrat';
     font-size: 50px;
@@ -13813,6 +13816,9 @@ section#about {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px; }
+    @media (max-width: 768px) {
+      section#about h4 {
+        font-size: 38px; } }
   section#about h5 {
     font-family: 'Montserrat';
     font-size: 24px;
@@ -13820,6 +13826,9 @@ section#about {
     text-align: center;
     text-transform: lowercase;
     margin-bottom: 15px; }
+    @media (max-width: 768px) {
+      section#about h5 {
+        font-size: 22px; } }
   section#about p {
     font-family: 'Montserrat';
     font-size: 16px;
@@ -13837,9 +13846,12 @@ section#services {
   height: auto;
   padding: 100px 0;
   background-color: #F9F9F9; }
+  @media (max-width: 768px) {
+    section#services {
+      padding: 90px 0; } }
   section#services h4 {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 300;
     letter-spacing: 1px;
     text-align: center;
@@ -13877,12 +13889,17 @@ section#services {
         font-weight: 300;
         letter-spacing: 1px;
         text-align: center; }
+    section#services ul .owl-nav {
+      display: none; }
 
 section#work {
   float: left;
   width: 100%;
   height: auto;
   padding: 100px 0; }
+  @media (max-width: 768px) {
+    section#work {
+      padding: 90px 0; } }
   section#work h4 {
     font-family: 'Montserrat';
     font-size: 50px;
@@ -13891,6 +13908,9 @@ section#work {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px; }
+    @media (max-width: 768px) {
+      section#work h4 {
+        font-size: 38px; } }
   section#work h5 {
     font-family: 'Montserrat';
     font-size: 24px;
@@ -13899,6 +13919,9 @@ section#work {
     text-align: center;
     text-transform: lowercase;
     margin-bottom: 15px; }
+    @media (max-width: 768px) {
+      section#work h5 {
+        font-size: 22px; } }
   section#work ul#work-menu {
     margin: 0 0 45px 0;
     padding: 0; }
@@ -13914,11 +13937,11 @@ section#work {
       padding: 2px 6px;
       border-radius: 5px;
       cursor: pointer; }
-  section#work ul#work-post, section#work ul#work-photography-design {
+  section#work ul#work-post, section#work ul.work-photography-design {
     flex-wrap: wrap;
     margin: 0;
     padding: 0; }
-    section#work ul#work-post li, section#work ul#work-photography-design li {
+    section#work ul#work-post li, section#work ul.work-photography-design li {
       position: relative;
       float: left;
       width: 28%;
@@ -13926,7 +13949,10 @@ section#work {
       margin: 20px 2%;
       opacity: 100%;
       transition-duration: .6s; }
-      section#work ul#work-post li:before, section#work ul#work-photography-design li:before {
+      @media (max-width: 768px) {
+        section#work ul#work-post li, section#work ul.work-photography-design li {
+          width: auto; } }
+      section#work ul#work-post li:before, section#work ul.work-photography-design li:before {
         content: '';
         display: block;
         position: absolute;
@@ -13936,7 +13962,7 @@ section#work {
         height: 0%;
         background-color: rgba(255, 255, 255, 0.7);
         transition-duration: .8s; }
-      section#work ul#work-post li:hover:before, section#work ul#work-photography-design li:hover:before {
+      section#work ul#work-post li:hover:before, section#work ul.work-photography-design li:hover:before {
         content: '';
         display: block;
         position: absolute;
@@ -13945,15 +13971,15 @@ section#work {
         width: 86%;
         height: 86%;
         background-color: rgba(255, 255, 255, 0.7); }
-      section#work ul#work-post li:hover .work-title, section#work ul#work-photography-design li:hover .work-title {
+      section#work ul#work-post li:hover .work-title, section#work ul.work-photography-design li:hover .work-title {
         top: 40%;
         visibility: visible;
         opacity: 100%; }
-      section#work ul#work-post li:hover .work-open-img, section#work ul#work-photography-design li:hover .work-open-img {
+      section#work ul#work-post li:hover .work-open-img, section#work ul.work-photography-design li:hover .work-open-img {
         top: 60%;
         visibility: visible;
         opacity: 100%; }
-      section#work ul#work-post li .work-title, section#work ul#work-photography-design li .work-title {
+      section#work ul#work-post li .work-title, section#work ul.work-photography-design li .work-title {
         position: absolute;
         top: 30%;
         font-family: 'Montserrat';
@@ -13965,7 +13991,7 @@ section#work {
         transition-duration: .7s;
         visibility: hidden;
         opacity: 0%; }
-      section#work ul#work-post li .work-open-img, section#work ul#work-photography-design li .work-open-img {
+      section#work ul#work-post li .work-open-img, section#work ul.work-photography-design li .work-open-img {
         position: absolute;
         top: 80%;
         width: 100%;
@@ -13973,32 +13999,38 @@ section#work {
         transition-duration: .7s;
         visibility: hidden;
         opacity: 0%; }
-        section#work ul#work-post li .work-open-img button, section#work ul#work-photography-design li .work-open-img button {
+        section#work ul#work-post li .work-open-img button, section#work ul.work-photography-design li .work-open-img button {
           cursor: pointer;
           width: 40px;
           height: 35px;
           background-color: #FD7070;
           border: none;
           transition-duration: .5s; }
-          section#work ul#work-post li .work-open-img button:hover, section#work ul#work-photography-design li .work-open-img button:hover {
+          section#work ul#work-post li .work-open-img button:hover, section#work ul.work-photography-design li .work-open-img button:hover {
             background-color: #757575; }
-          section#work ul#work-post li .work-open-img button i, section#work ul#work-photography-design li .work-open-img button i {
+          section#work ul#work-post li .work-open-img button i, section#work ul.work-photography-design li .work-open-img button i {
             color: #FFFFFF; }
-      section#work ul#work-post li .work-img img, section#work ul#work-photography-design li .work-img img {
+      section#work ul#work-post li .work-img img, section#work ul.work-photography-design li .work-img img {
         width: 100%;
         height: auto; }
+    section#work ul#work-post .owl-nav, section#work ul.work-photography-design .owl-nav {
+      display: none; }
 
 section#clients {
   position: relative;
   float: left;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
   padding: 115px 0;
   background-color: #F9F9F9;
   background-image: url(../img/clients/back-mountain-2.jpg);
   background-size: cover;
   background-position-y: center;
   background-attachment: fixed; }
+  @media (max-width: 768px) {
+    section#clients {
+      padding: 90px 0; } }
   section#clients:before {
     background-color: rgba(39, 39, 39, 0.65);
     content: '';
@@ -14039,15 +14071,22 @@ section#clients {
       color: #FFFFFF;
       width: 50%;
       margin: 30px auto; }
+      @media (max-width: 768px) {
+        section#clients ul li .clients-content {
+          width: auto;
+          margin: 30px 15px; } }
 
 section#contact {
   float: left;
   width: 100%;
   height: auto;
   padding: 100px 0; }
+  @media (max-width: 768px) {
+    section#contact {
+      padding: 90px 0; } }
   section#contact h4 {
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
@@ -14118,18 +14157,27 @@ footer {
     font-family: 'Montserrat';
     font-size: 24px;
     margin-bottom: 30px; }
+  @media (max-width: 768px) {
+    footer .footer-datas {
+      margin-top: 30px; } }
   footer .footer-datas span i {
     text-align: center;
     font-size: 35px;
     color: #FFFFFF;
     width: 100%;
     margin-bottom: 20px; }
+    @media (max-width: 768px) {
+      footer .footer-datas span i {
+        margin-bottom: 10px; } }
   footer .footer-datas span p {
     text-align: center;
     font-size: 15px;
     font-weight: 400;
     color: #FFFFFF;
     margin-bottom: 5px; }
+    @media (max-width: 768px) {
+      footer .footer-datas span p {
+        margin-bottom: 5px; } }
     footer .footer-datas span p i {
       float: left;
       width: initial;
@@ -14145,6 +14193,9 @@ footer {
     font-weight: 300;
     color: #FFFFFF;
     margin-top: 75px; }
+    @media (max-width: 768px) {
+      footer .footer-datas span h6 {
+        margin-top: 50px; } }
   footer #footer-social-media span i {
     text-align: center;
     float: left;

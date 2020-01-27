@@ -1,40 +1,66 @@
 $('#services ul').owlCarousel({
 	loop: true,
+	autoplay: true,
+	autoplayTimeout: 2000,
+	autoplayHoverPause: true,
+	autoplaySpeed: false,
+	dots: false,
+	navText: [" ", " "],
 	reponsiveClass: true,
 	responsive:{
 		0:{
-			items: 1,
-			nav: true
+			items: 1
 		},
 		600:{
-			items: 2,
-			nav: true
+			items: 2
 		},
 		1000:{
-			items: 3,
-			nav: true
+			items: 3
+		}
+	}
+});
+
+$('ul#work-menu-responsive').owlCarousel({
+	loop: true,
+	autoplay: true,
+	autoplayTimeout: 2500,
+	autoplayHoverPause: true,
+	autoplaySpeed: false,
+	dots: false,
+	navText: [" ", " "],
+	reponsiveClass: true,
+	responsive:{
+		0:{
+			items: 1
+		},
+		768:{
+			items: 1
 		}
 	}
 });
 
 $('#clients ul').owlCarousel({
 	loop: true,
+	autoplay: true,
+	autoplayTimeout: 2500,
+	autoplayHoverPause: true,
+	autoplaySpeed: false,
+	dots: true,
 	reponsiveClass: true,
 	responsive:{
 		0:{
-			items: 1,
-			nav: true
+			items: 1
 		},
 		600:{
-			items: 1,
-			nav: true
+			items: 1
 		},
 		1000:{
-			items: 1,
-			nav: true
+			items: 1
 		}
 	}
 });
+
+
 
 // ================================================
 // ==================== HEADER ====================

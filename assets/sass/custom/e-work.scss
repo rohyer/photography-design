@@ -5,6 +5,10 @@ section {
         height: auto;
         padding: 100px 0;
 
+        @media (max-width: 768px) {
+            padding: 90px 0;
+        }
+
         h4 {
             font-family: 'Montserrat';
             font-size: 50px;
@@ -13,6 +17,10 @@ section {
             text-align: center;
             text-transform: uppercase;
             margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 38px;
+            }
         }
 
         h5 {
@@ -23,6 +31,10 @@ section {
             text-align: center;
             text-transform: lowercase;
             margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
         }
 
         ul {
@@ -45,7 +57,7 @@ section {
                 }
             }
 
-            &#work-post, &#work-photography-design {
+            &#work-post, &.work-photography-design {
                 flex-wrap: wrap;
                 margin: 0;
                 padding: 0;
@@ -58,6 +70,10 @@ section {
                     margin: 20px 2%;
                     opacity: 100%;
                     transition-duration: .6s;
+
+                    @media (max-width: 768px) {
+                        width: auto;
+                    }
 
                     &:before {
                         content: '';
@@ -143,6 +159,10 @@ section {
                             height: auto;
                         }
                     }
+                }
+
+                .owl-nav {
+                    display: none;
                 }
             }
         }

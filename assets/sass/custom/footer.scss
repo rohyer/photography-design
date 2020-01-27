@@ -13,6 +13,10 @@ footer {
     }
 
     .footer-datas {
+        @media (max-width: 768px) {
+            margin-top: 30px;
+        }
+
         span {
             i {
                 text-align: center;
@@ -20,6 +24,10 @@ footer {
                 color: #FFFFFF;
                 width: 100%;
                 margin-bottom: 20px;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 10px;
+                }
             }
 
             p {
@@ -28,6 +36,10 @@ footer {
                 font-weight: 400;
                 color: #FFFFFF;
                 margin-bottom: 5px;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 5px;
+                }
 
                 i {
                     float: left;
@@ -47,6 +59,10 @@ footer {
                 font-weight: 300;
                 color: #FFFFFF;
                 margin-top: 75px;
+
+                @media (max-width: 768px) {
+                    margin-top: 50px;
+                }
             }
         }
     }
