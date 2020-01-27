@@ -80,7 +80,6 @@ window.addEventListener('scroll', function(e) {
 
 window.addEventListener('scroll', function(e) {
 	const y = window.pageYOffset
-	console.log('y' + y)
 
 	const headerMenu = document.getElementById('home').offsetHeight
 	const sectionShow = document.getElementById('show')
