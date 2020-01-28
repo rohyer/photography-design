@@ -14109,7 +14109,7 @@ section#work {
     section#work ul#work-post li, section#work ul.work-photography-design li {
       position: relative;
       float: left;
-      width: 28%;
+      width: 26%;
       list-style: none;
       margin: 20px 2%;
       opacity: 100%;
@@ -14117,33 +14117,34 @@ section#work {
       @media (max-width: 768px) {
         section#work ul#work-post li, section#work ul.work-photography-design li {
           width: auto; } }
-      section#work ul#work-post li:before, section#work ul.work-photography-design li:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0%;
-        height: 0%;
-        background-color: rgba(255, 255, 255, 0.7);
-        transition-duration: .8s; }
-      section#work ul#work-post li:hover:before, section#work ul.work-photography-design li:hover:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 7%;
-        left: 7%;
-        width: 86%;
-        height: 86%;
-        background-color: rgba(255, 255, 255, 0.7); }
-      section#work ul#work-post li:hover .work-title, section#work ul.work-photography-design li:hover .work-title {
-        top: 40%;
-        visibility: visible;
-        opacity: 100%; }
-      section#work ul#work-post li:hover .work-open-img, section#work ul.work-photography-design li:hover .work-open-img {
-        top: 60%;
-        visibility: visible;
-        opacity: 100%; }
+      @media (min-width: 769px) {
+        section#work ul#work-post li:before, section#work ul.work-photography-design li:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0%;
+          height: 0%;
+          background-color: rgba(255, 255, 255, 0.7);
+          transition-duration: .8s; }
+        section#work ul#work-post li:hover:before, section#work ul.work-photography-design li:hover:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 7%;
+          left: 7%;
+          width: 86%;
+          height: 86%;
+          background-color: rgba(255, 255, 255, 0.7); }
+        section#work ul#work-post li:hover .work-title, section#work ul.work-photography-design li:hover .work-title {
+          top: 40%;
+          visibility: visible;
+          opacity: 100%; }
+        section#work ul#work-post li:hover .work-open-img, section#work ul.work-photography-design li:hover .work-open-img {
+          top: 60%;
+          visibility: visible;
+          opacity: 100%; } }
       section#work ul#work-post li .work-title, section#work ul.work-photography-design li .work-title {
         position: absolute;
         top: 30%;
