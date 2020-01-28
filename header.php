@@ -12,7 +12,7 @@
     <header id="home" class="section-site">
         <div class="container-custom">
             <div class="row">
-                <div id="logo" class="d-flex justify-content-center justify-content-md-start col-md-3 col-lg-3 col-xl-2">
+                <div id="logo" class="d-flex justify-content-start col-9 col-md-3 col-lg-3 col-xl-2">
                     <h1><a href="<?php echo esc_url( home_url('/') ); ?>">Logotipo</a></h1>
                 </div>
 
@@ -36,6 +36,48 @@
 
                     ?> -->
                 </div>
+
+                <div id="main-icon" class="d-flex justify-content-end align-items-center col-3 d-md-none">
+                    <div id="btn-icon" class="menu-closed">
+                        <span class="hamburger"></span>
+                    </div>
+                </div>
+
+                <nav id="responsive-menu" class="container-custom d-md-none">
+                    <ul id="menu-list">
+                        <h6>Menu</h6>
+                        <li><a href="<?php echo esc_url( home_url('/') ); ?>">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <ul id="menu-social-medias">
+                        <?php $facebook = get_theme_mod("facebook", 0); ?>
+                        <?php $instagram = get_theme_mod("instagram", 0); ?>
+                        <?php $twitter = get_theme_mod("twitter", 0); ?>
+                        <?php $linkedin = get_theme_mod("linkedin", 0); ?>
+                        
+                        <?php if ($facebook != '') { ?>
+                            <a href="<?php echo get_theme_mod( 'facebook' ) ?>">
+                            <i class="fab fa-facebook-f"></i></a>
+                        <?php } ?>
+                        <?php if ($instagram != '') { ?>
+                            <a href="<?php echo get_theme_mod( 'instagram' ) ?>">
+                            <i class="fab fa-instagram"></i></a>
+                        <?php } ?>
+                        <?php if ($linkedin != '') { ?>
+                            <a href="<?php echo get_theme_mod( 'linkedin' ) ?>">
+                            <i class="fab fa-linkedin-in"></i></a>
+                        <?php } ?>
+                        <?php if ($twitter != '') { ?>
+                            <a href="<?php echo get_theme_mod( 'twitter' ) ?>">
+                            <i class="fab fa-twitter"></i></a>
+                        <?php } ?>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>

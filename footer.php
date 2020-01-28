@@ -31,13 +31,29 @@
                     <h6><?php echo get_theme_mod( 'name_company' ) ?></h6>
                 </span>
             </div>
-
+            
             <div id="footer-social-media" class="col-12 d-flex justify-content-center">
+                <?php $facebook = get_theme_mod("facebook", 0); ?>
+                <?php $instagram = get_theme_mod("instagram", 0); ?>
+                <?php $twitter = get_theme_mod("twitter", 0); ?>
+                <?php $linkedin = get_theme_mod("linkedin", 0); ?>
                 <span>
-                    <a href="<?php echo get_theme_mod( 'facebook' ) ?>"><i class="fab fa-facebook-f"></i></a>
-                    <a href="<?php echo get_theme_mod( 'instagram' ) ?>"><i class="fab fa-instagram"></i></a>
-                    <a href="<?php echo get_theme_mod( 'twitter' ) ?>"><i class="fab fa-twitter"></i></a>
-                    <a href="<?php echo get_theme_mod( 'linkedin' ) ?>"><i class="fab fa-linkedin-in"></i></a>
+                    <?php if ($facebook != '') { ?>
+                        <a href="<?php echo get_theme_mod( 'facebook' ) ?>">
+                        <i class="fab fa-facebook-f"></i></a>
+                    <?php } ?>
+                    <?php if ($instagram != '') { ?>
+                        <a href="<?php echo get_theme_mod( 'instagram' ) ?>">
+                        <i class="fab fa-instagram"></i></a>
+                    <?php } ?>
+                    <?php if ($linkedin != '') { ?>
+                        <a href="<?php echo get_theme_mod( 'linkedin' ) ?>">
+                        <i class="fab fa-linkedin-in"></i></a>
+                    <?php } ?>
+                    <?php if ($twitter != '') { ?>
+                        <a href="<?php echo get_theme_mod( 'twitter' ) ?>">
+                        <i class="fab fa-twitter"></i></a>
+                    <?php } ?>
                 </span>
             </div>
         </div>

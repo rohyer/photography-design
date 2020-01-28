@@ -208,6 +208,34 @@ function smoothScrollTo(endY, duration) {
 // ==================== CLICK SCROLL ====================
 
 // ======================================================
+// ==================== RESPONSIVE MENU =================
+
+const btnIcon = document.getElementById('btn-icon');
+btnIcon.addEventListener('click', openCloseMenu)
+function openCloseMenu(){
+	let responsiveMenu = document.getElementById('responsive-menu')
+	let body = document.getElementsByTagName('body')[0]
+	console.log(btnIcon.className)
+
+	if (btnIcon.className == 'menu-closed') {
+		btnIcon.classList.remove('menu-closed')
+		btnIcon.classList.add('menu-opened')
+		responsiveMenu.classList.add('open-menu-responsive')
+		body.style.overflow = 'hidden'
+	} else if (btnIcon.className == 'menu-opened') {
+		btnIcon.classList.remove('menu-opened')
+		btnIcon.classList.add('menu-closed')
+		responsiveMenu.classList.remove('open-menu-responsive')
+		body.style.overflow = 'initial'
+	}
+}
+
+
+
+// ======================================================
+// ==================== RESPONSIVE MENU =================
+
+// ======================================================
 // ==================== CLICK WORK ======================
 
 var workPhotography = window.document.querySelectorAll('#work-menu li')
