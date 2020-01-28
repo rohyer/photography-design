@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
     <header id="home" class="section-site">
-        <div class="container-custom">
+        <div class="container-h-custom">
             <div class="row">
                 <div id="logo" class="d-flex justify-content-start col-9 col-md-3 col-lg-3 col-xl-2">
                     <h1><a href="<?php echo esc_url( home_url('/') ); ?>">Logotipo</a></h1>
@@ -43,15 +43,15 @@
                     </div>
                 </div>
 
-                <nav id="responsive-menu" class="container-custom d-md-none">
+                <nav id="responsive-menu" class="d-md-none">
                     <ul id="menu-list">
                         <h6>Menu</h6>
-                        <li><a href="<?php echo esc_url( home_url('/') ); ?>">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Clients</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
 
                     <ul id="menu-social-medias">

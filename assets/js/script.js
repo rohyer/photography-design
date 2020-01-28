@@ -158,7 +158,7 @@ window.addEventListener('scroll', function(e) {
 
 var menuItems = window.document.querySelectorAll('li.header-menu-item a')
 
-menuItems.forEach(item => {
+menuItems.forEach(function(item) {
 	item.addEventListener('click', scrollClick)
 })
 
@@ -171,6 +171,32 @@ function scrollClick(event) {
 	const heightHeader = header.offsetHeight
 	const heightMenuItem = menuItem.offsetTop
 	const toPosition = heightMenuItem - heightHeader
+	scrollToPosition(toPosition)
+}
+
+const menuItemsResponsive = window.document.querySelectorAll('ul#menu-list li a')
+menuItemsResponsive.forEach(function(element) {
+	element.addEventListener('click', scrollClickResponsive)
+})
+console.log(menuItemsResponsive)
+
+function scrollClickResponsive(event) {
+	event.preventDefault()
+	const element = event.target
+	const responsiveMenu = document.getElementById('responsive-menu')
+	const btnIcon = document.getElementById('btn-icon')
+	const body = document.getElementsByTagName('body')[0]
+	const id = element.getAttribute('href')
+	console.log(id)
+	const menuItem = window.document.querySelector(id)
+	const header = window.document.querySelector('header')
+	const heightHeader = header.offsetHeight
+	const heightMenuItem = menuItem.offsetTop
+	const toPosition = heightMenuItem - heightHeader
+	responsiveMenu.classList.remove('open-menu-responsive')
+	btnIcon.classList.remove('menu-opened')
+	btnIcon.classList.add('menu-closed')
+	body.style.overflow = "initial"
 	scrollToPosition(toPosition)
 }
 

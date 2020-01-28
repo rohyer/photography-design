@@ -13594,6 +13594,22 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
 
+.container-h-custom {
+  width: 100%;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 768px) {
+    .container-h-custom {
+      max-width: 900px; } }
+  @media (min-width: 992px) {
+    .container-h-custom {
+      max-width: 1080px; } }
+  @media (min-width: 1200px) {
+    .container-h-custom {
+      max-width: 1420px; } }
+
 .container-custom {
   width: 100%;
   padding-right: 25px;
@@ -13805,8 +13821,7 @@ nav#responsive-menu {
   visibility: hidden;
   opacity: 0;
   background-color: #FFFFFF;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 25px;
   z-index: 999;
   transition: all .3s ease-out; }
   @media (max-height: 500px) {
