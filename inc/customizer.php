@@ -3,6 +3,24 @@
 function mytheme_customize_register( $wp_customize ) {
 
     // ============================================
+    // =============== COMPANY LOGO ===============
+    $wp_customize->add_section(
+        'logologo',
+        array (
+            'title' => 'Logo Company',
+            'priority' => 20
+        )
+    );
+
+    $wp_customize->add_setting( 'm1_logo' ); // Add setting for logo uploader
+    // Add control for logo uploader (actual uploader)
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'm1_logo', array(
+    'label' => __( 'Upload Logo (replaces text)', 'm1' ),
+    'section' => 'logologo',
+    'settings' => 'm1_logo'
+    ) ) );
+
+    // ============================================
     // =============== COMPANY NAME ===============
     $wp_customize->add_section(
         'section_company', array(

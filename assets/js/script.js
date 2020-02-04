@@ -41,7 +41,7 @@ $('ul#work-menu-responsive').owlCarousel({
 
 $('#clients ul').owlCarousel({
 	loop: true,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 2500,
 	autoplayHoverPause: true,
 	autoplaySpeed: false,

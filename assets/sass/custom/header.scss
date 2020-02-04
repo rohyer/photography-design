@@ -15,10 +15,11 @@ header {
 
     #logo {
         h1 {
+            display: flex;
+            align-items: center;
             font-family: 'Montserrat';
             font-size: 40px;
             margin: 0;
-            line-height: 90px;
 
             @media (max-width: 768px) {
                 font-size: 24px;
@@ -28,6 +29,16 @@ header {
             a {
                 text-decoration: none;
                 color: #FFFFFF;
+
+                img {
+                    height: 75px;
+                    max-height: 75px;
+
+                    @media (max-width: 768px) {
+                        height: 42px;
+                        max-height: 42px;
+                    }
+                }
             }
         }
     }

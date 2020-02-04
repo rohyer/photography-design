@@ -47,6 +47,21 @@
     background-color: #3F3F3F;
     margin-top: 0px;
     transition-duration: .6s;
+
+    h1 {
+        a {
+            img {
+                height: 60px !important;
+                max-height: 60px !important;
+                transition-duration: .6s;
+
+                @media (max-width: 768px) {
+                    height: 42px !important;
+                    max-height: 42px !important;
+                }
+            }
+        }
+    }
 }
 
 
