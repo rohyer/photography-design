@@ -13738,12 +13738,14 @@ header {
     display: flex;
     align-items: center;
     font-family: 'Montserrat';
-    font-size: 40px;
+    font-size: 26px;
     margin: 0; }
+    @media (max-width: 900px) and (min-width: 768px) {
+      header #logo h1 {
+        font-size: 22px; } }
     @media (max-width: 768px) {
       header #logo h1 {
-        font-size: 24px;
-        line-height: 60px; } }
+        font-size: 18px; } }
     header #logo h1 a {
       text-decoration: none;
       color: #FFFFFF; }
@@ -13896,7 +13898,6 @@ nav#responsive-menu {
 section#show {
   width: 100%;
   position: relative;
-  height: 724px;
   background-image: url(../img/1.jpg);
   background-size: cover; }
   section#show:before {
@@ -13910,7 +13911,7 @@ section#show {
     top: 0; }
   section#show #welcome-phrase {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 550px;
@@ -14154,16 +14155,12 @@ section#work {
           height: 86%;
           background-color: rgba(255, 255, 255, 0.7); }
         section#work ul#work-post li:hover .work-title, section#work ul.work-photography-design li:hover .work-title {
-          top: 40%;
-          visibility: visible;
-          opacity: 100%; }
-        section#work ul#work-post li:hover .work-open-img, section#work ul.work-photography-design li:hover .work-open-img {
-          top: 60%;
+          top: 45%;
           visibility: visible;
           opacity: 100%; } }
       section#work ul#work-post li .work-title, section#work ul.work-photography-design li .work-title {
         position: absolute;
-        top: 30%;
+        top: 45%;
         font-family: 'Montserrat';
         font-size: 16px;
         font-weight: 300;
@@ -14173,25 +14170,6 @@ section#work {
         transition-duration: .7s;
         visibility: hidden;
         opacity: 0%; }
-      section#work ul#work-post li .work-open-img, section#work ul.work-photography-design li .work-open-img {
-        position: absolute;
-        top: 80%;
-        width: 100%;
-        text-align: center;
-        transition-duration: .7s;
-        visibility: hidden;
-        opacity: 0%; }
-        section#work ul#work-post li .work-open-img button, section#work ul.work-photography-design li .work-open-img button {
-          cursor: pointer;
-          width: 40px;
-          height: 35px;
-          background-color: #FD7070;
-          border: none;
-          transition-duration: .5s; }
-          section#work ul#work-post li .work-open-img button:hover, section#work ul.work-photography-design li .work-open-img button:hover {
-            background-color: #757575; }
-          section#work ul#work-post li .work-open-img button i, section#work ul.work-photography-design li .work-open-img button i {
-            color: #FFFFFF; }
       section#work ul#work-post li .work-img img, section#work ul.work-photography-design li .work-img img {
         width: 100%;
         height: auto; }

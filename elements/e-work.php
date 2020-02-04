@@ -43,9 +43,6 @@ $args_work = array(
                         <div class="work-title">
                             <span><?php the_title(); ?></span>
                         </div>
-                        <div class="work-open-img">
-                            <button><i class="fas fa-search"></i></button>
-                        </div>
                         <div class="work-img">
                             <?php the_post_thumbnail(); ?>
                         </div>
@@ -65,9 +62,6 @@ $args_work = array(
                         <div class="work-title">
                             <span><?php the_title(); ?></span>
                         </div>
-                        <div class="work-open-img">
-                            <button><i class="fas fa-search"></i></button>
-                        </div>
                         <div class="work-img">
                             <?php the_post_thumbnail(); ?>
                         </div>
@@ -86,12 +80,6 @@ $args_work = array(
                         $query_work->the_post();
                 ?>
                 <li id="post-<?php the_ID(); ?>" <?php post_class('work-post') ?>>
-                    <div class="work-title">
-                        <span><?php the_title(); ?></span>
-                    </div>
-                    <div class="work-open-img">
-                        <button><i class="fas fa-search"></i></button>
-                    </div>
                     <div class="work-img">
                         <?php the_post_thumbnail(); ?>
                     </div>

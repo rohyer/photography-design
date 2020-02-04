@@ -60,6 +60,17 @@ $('#clients ul').owlCarousel({
 	}
 });
 
+// ================================================
+// ================= HEIGHT E-SHOW ================
+function sizingHeightEShow() {
+	const sectionEShow = window.document.getElementById('show');
+	const windowHeight = window.innerHeight;
+	const windowHeightPX = windowHeight + 'px';
+
+	sectionEShow.style.height = windowHeightPX;
+}
+sizingHeightEShow();
+
 
 
 // ================================================

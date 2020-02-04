@@ -20,6 +20,35 @@ function mytheme_customize_register( $wp_customize ) {
     'settings' => 'm1_logo'
     ) ) );
 
+    $wp_customize->add_setting( 'logo_text', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ) );
+    $wp_customize->add_control( 'logo_text', array(
+        'type' => 'text',
+        'section' => 'logologo',
+        'label' => __('If you do not have a image logo, enter your name or the name of your company', 'odin'),
+        'input_attrs' => array(
+            'placeholder' => __('Arts & Photograpy'),
+        )
+    ));
+    
+    $wp_customize->add_setting('type_of_logo', array(
+        'default' => '',
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('type_of_logo', array(
+        'type' => 'radio',
+        'section' => 'logologo',
+        'label' => __('Choice which logo you want to show'),
+        'choices' => array(
+            'value1' => __( "Image log" ),
+            'value2' => __( "Text logo" ),
+        )
+    ));
+
     // ============================================
     // =============== COMPANY NAME ===============
     $wp_customize->add_section(

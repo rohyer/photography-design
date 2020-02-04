@@ -1,9 +1,8 @@
 section {
     &#show {
         width: 100%;
-        // height: auto;
         position: relative;
-        height: 724px;
+        //height: 724px;
         background-image: url(../img/1.jpg);
         background-size: cover;
 
@@ -20,7 +19,7 @@ section {
 
         #welcome-phrase {
             position: absolute;
-            top: 50%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 550px;

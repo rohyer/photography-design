@@ -12,11 +12,20 @@
     <header id="home" class="section-site">
         <div class="container-h-custom">
             <div class="row">
-                <div id="logo" class="d-flex justify-content-start col-9 col-md-3 col-lg-3 col-xl-2">
-                    <h1><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_theme_mod( 'm1_logo' ) ?>" alt=""></a></h1>
+                <div id="logo" class="d-flex justify-content-start col-9 col-md-4 col-lg-4 col-xl-3">
+                    <?php $value = get_theme_mod( 'type_of_logo', 0 ); ?>
+                    <h1>
+                        <a href="<?php echo esc_url( home_url('/') ); ?>">
+                            <?php if ($value == 'value1') { ?>
+                            <img src="<?php echo get_theme_mod( 'm1_logo' ) ?>" alt="">
+                            <?php } else if ($value == 'value2') { ?>
+                                <?php echo get_theme_mod( 'logo_text') ?>
+                            <?php } ?>
+                        </a>
+                    </h1>
                 </div>
 
-                <div id="header-menu" class="d-none d-md-flex col-md-9 col-lg-7 offset-lg-2 col-xl-7 offset-xl-3 justify-content-md-end">
+                <div id="header-menu" class="d-none d-md-flex col-md-8 col-lg-7 offset-lg-1 col-xl-7 offset-xl-2 justify-content-md-end">
 
                     <ul>
                         <li class="header-menu-item"><a href="#home" id="menu-home" class="header-menu-no-selected">Home</a></li>
