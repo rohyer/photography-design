@@ -5,12 +5,9 @@ $args = array(
 ?>
 
 <section id="clients" class="section-site">
+<a href="https://br.freepik.com/fotos-vetores-gratis/fundo" alt="Fundo foto criado por photoangel - br.freepik.com" target="__blank" style="position: absolute; width: 20px; height: 20px; "></a>
     <div class="container-custom">
         <div class="row">
-            <!-- <div class="col-12">
-                <h4>Our clients feedback</h4>
-            </div> -->
-
             <div class="col-12">
                 <ul class="owl-carousel owl-theme">
                 <?php

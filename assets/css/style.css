@@ -13898,6 +13898,7 @@ nav#responsive-menu {
 section#show {
   width: 100%;
   position: relative;
+  height: 724px;
   background-image: url(../img/1.jpg);
   background-size: cover; }
   section#show:before {
@@ -14170,6 +14171,10 @@ section#work {
         transition-duration: .7s;
         visibility: hidden;
         opacity: 0%; }
+        section#work ul#work-post li .work-title span a, section#work ul.work-photography-design li .work-title span a {
+          position: absolute;
+          width: 20px;
+          height: 20px; }
       section#work ul#work-post li .work-img img, section#work ul.work-photography-design li .work-img img {
         width: 100%;
         height: auto; }

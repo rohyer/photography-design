@@ -127,6 +127,14 @@ section {
                         transition-duration: .7s;
                         visibility: hidden;
                         opacity: 0%;
+
+                        span {
+                            a {
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
                     }
 
                     // .work-open-img {

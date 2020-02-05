@@ -1,7 +1,7 @@
 <section id="show" class="section-site">
+    <a href="https://br.freepik.com/fotos-vetores-gratis/fundo" alt="Fundo foto criado por v.ivash - br.freepik.com" target="__black" style="position: absolute; width: 20px; height: 20px; "></a>
     <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/main.jpg" alt=""> -->
 
-    <!-- <div id="image-show"> -->
     <div id="welcome-phrase">
     <?php $hide_iam = get_theme_mod( "hide_iam", 0 ); ?>
     <?php $main_work = get_theme_mod( "main_work", 0 ); ?>
@@ -50,5 +50,4 @@
 
     <?php } ?>
     </div>
-    <!-- </div> -->
 </section>

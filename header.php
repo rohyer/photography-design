@@ -31,19 +31,10 @@
                         <li class="header-menu-item"><a href="#home" id="menu-home" class="header-menu-no-selected">Home</a></li>
                         <li class="header-menu-item"><a href="#about" id="menu-about" class="header-menu-no-selected">About</a></li>
                         <li class="header-menu-item"><a href="#services" id="menu-services">Services</a></li>
-                        <li class="header-menu-item"><a href="#work" id="menu-work">Work</a></li>
+                        <li class="header-menu-item"><a href="#work" id="menu-work">Portfolio</a></li>
                         <li class="header-menu-item"><a href="#clients" id="menu-clients">Clients</a></li>
                         <li class="header-menu-item"><a href="#contact" id="menu-contact">Contact</a></li>
                     </ul>
-
-                    <!-- <?php
-
-                    wp_nav_menu( array(
-                        'menu' => 'menu',
-                        'theme_location' => 'menu'
-                    ));
-
-                    ?> -->
                 </div>
 
                 <div id="main-icon" class="d-flex justify-content-end align-items-center col-3 d-md-none">
@@ -58,7 +49,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#work">Work</a></li>
+                        <li><a href="#work">Portfolio</a></li>
                         <li><a href="#clients">Clients</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>

@@ -311,20 +311,6 @@ function mytheme_customize_register( $wp_customize ) {
         'section' => 'section_welcome',
         'label' => __('type in one word another qualitie of yours or of your team')
     ));
-
-    // $wp_customize->add_setting('hide_qualities_message', array(
-    //     'default' => '',
-    //     'capability' => 'edit_theme_options',
-    //     'sanitize_callback' => 'sanitize_text_field'
-    // ));
-    // $wp_customize->add_control('hide_qualities_message', array(
-    //     'type' => 'text',
-    //     'section' => 'section_welcome',
-    //     'label' => __('Choice what qualities you or your team have'),
-    //     'input_attrs' => array(
-    //         'placeholder' => __('https://www.twitter.com/pagina/'),
-    //     ),
-    // ));
     
 }
 

@@ -1,3 +1,10 @@
+/*
+Theme Name: Photography - Design
+Author: Guilherme R. de Oliveira
+Description: Site to photographer and/or designers show your jobs. The technologies used were Javascript, Jquery, HTML5, CSS3, SASS, Bootstrap and OWL Carousel.
+Version: 1.0.
+*/
+
 $('#services ul').owlCarousel({
 	loop: true,
 	autoplay: true,
@@ -22,7 +29,7 @@ $('#services ul').owlCarousel({
 
 $('ul#work-menu-responsive').owlCarousel({
 	loop: true,
-	autoplay: false,
+	autoplay: true,
 	autoplayTimeout: 2500,
 	autoplayHoverPause: true,
 	autoplaySpeed: false,
@@ -182,7 +189,7 @@ function scrollClick(event) {
 	const heightHeader = header.offsetHeight
 	const heightMenuItem = menuItem.offsetTop
 	const toPosition = heightMenuItem - heightHeader
-	scrollToPosition(toPosition)
+	scrollToPosition(toPosition + 10)
 }
 
 const menuItemsResponsive = window.document.querySelectorAll('ul#menu-list li a')
@@ -212,10 +219,6 @@ function scrollClickResponsive(event) {
 }
 
 function scrollToPosition(toPosition) {
-	// window.scroll({
-	// 	top: toPosition,
-	// 	behavior: "smooth"
-	// })
 	smoothScrollTo(toPosition, 1000)
 }
 
@@ -226,12 +229,12 @@ function smoothScrollTo(endY, duration) {
 
 	duration = typeof duration !== 'undefined' ? duration : 400
 
-	const easeInOutQuart = (time, from, distance, duration) => {
+	const easeInOutQuart = function(time, from, distance, duration) {
 		if ((time /= duration /2 ) < 1) return distance / 2 * time * time * time * time * time + from
 		return -distance /2 * ((time -= 2) * time * time * time - 2) + from
 	}
 
-	const timer = setInterval(() => {
+	const timer = setInterval(function() {
 		const time = new Date().getTime() - startTime
 		const newY = easeInOutQuart(time, startY, distanceY, duration)
 		if (time >= duration) {
@@ -277,7 +280,7 @@ function openCloseMenu(){
 
 var workPhotography = window.document.querySelectorAll('#work-menu li')
 
-workPhotography.forEach(item => {
+workPhotography.forEach(function(item) {
 	item.addEventListener('click', changeFocusWork)
 })
 
@@ -332,28 +335,6 @@ function changeFocusWork(event) {
 // ======================================================
 // ==================== CLICK WORK ======================
 
-// ======================================================
-// ==================== WELCOME PHRASE ==================
-
-// function writer() {
-// 	const text = window.document.querySelector('#welcome-phrase h2 span')
-// 	const textArray = text.innerHTML.split('')
-// 	text.innerHTML = ''
-// 	textArray.forEach((letter, i) => {
-// 		setTimeout(() => text.innerHTML += letter, 125 * i)
-// 	})
-// }
-
-// function writer() {
-// 	const text = window.document.querySelector('#welcome-phrase h2 span')
-// 	const textArray = text.innerHTML.split('')
-// 	textArray.forEach((letter, i) => {
-// 		setTimeout(() => text.innerHTML -= letter, 125 * i)
-// 	})
-// }
-
-
-// window.onload = writer()
 
 // ======================================================
 // ==================== WELCOME PHRASE ==================
