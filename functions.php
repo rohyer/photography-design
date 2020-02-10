@@ -4,7 +4,7 @@ add_theme_support( 'post-thumbnails' );
 
 function g_scripts() {
 
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.min.css');
 
     wp_enqueue_script('jquery-3.4.1', get_template_directory_uri() . '/assets/js/jquery-3.4.1.js', array(), '1.0', true);
     wp_enqueue_script('index', get_template_directory_uri() . '/assets/js/bootstrap/index.js', array(), '1.0', true);

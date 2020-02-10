@@ -250,6 +250,16 @@ function smoothScrollTo(endY, duration) {
 // ======================================================
 // ==================== RESPONSIVE MENU =================
 
+function sizeMenuResponsive() {
+	const responsiveMenuHeight = document.getElementById('responsive-menu')
+	const windowHeightMenu = window.innerHeight;
+	const windowHeightMenuPX = windowHeightMenu - 60;
+	const windowHeightMenuFinal = windowHeightMenuPX + 'px';
+
+	responsiveMenuHeight.style.height = windowHeightMenuFinal;
+}
+sizeMenuResponsive();
+
 const btnIcon = document.getElementById('btn-icon');
 btnIcon.addEventListener('click', openCloseMenu)
 function openCloseMenu(){
