@@ -1,12 +1,12 @@
-# photography-design
+# Photography-design
 
-Photography and Design é um site template feito para wordpress que tem como foco ser o portfólio tanto de uma empresa ou de uma pessoa que trabalha nesses dois meios como também em um só.
+Photography and Design is a website template made for wordpress that focuses on being the portfolio of both a company or a person working in these two media as well as one.
 
-O site é composto por 5 seções:
-  . About us: serve para a apresentação da empresa/equipe, podendo detalhar sobre si mesmos
-  . Services: é para demonstrar aos clientes os serviços que a empresa dispõe
-  . Portfolio: foca em mostrar aos cliente os trabalhos já realizados pela empresa/equipe
-  . Client's feedback: é para apresentar o que os clientes passados acharam do trabalho prestado
-  . Contact: serve para que algum cliente possa entrar em contato, tanto pelo formulário, como também pelos contatos que a empresa/equipe       poderá inserir
+The website consists of 5 sections:
+   . About us: serves for the presentation of the company / team, being able to detail about themselves
+   . Services: is to demonstrate to customers the services that the company has
+   . Portfolio: focuses on showing clients the work already done by the company / team
+   . Client's feedback: it is to present what past customers thought of the work provided
+   . Contact: it is used so that some customer can get in contact, both through the form, as well as through the contacts that the company / team can insert
   
-Através do customizador wordpress é possível personalizar o site para que atenda os dois tipos de serviços, fotógrafo e design como também, apenas um destes.
+Through the wordpress customizer it is possible to customize the website to meet the two types of services, photographer and design, as well as just one of these.
